@@ -1,3 +1,6 @@
+# in .conf viene definita MACHINEOVERRIDES
+#conf/machine/microgea.conf:MACHINEOVERRIDES =. "mx6:mx6ull:gea:"conf/machine/microgea.conf:MACHINEOVERRIDES =. "mx6:mx6ull:gea:"
+
 DESCRIPTION = "Engicam image with QT5 demo image for Frame Buffer"
 
 LICENSE = "MIT"
@@ -85,9 +88,10 @@ IMAGE_INSTALL_append_icoremx6sx = " \
 
 #PACKAGES QT
 IMAGE_INSTALL_append_gea = " \
-  qtquick1 \
-	${@bb.utils.contains('STARTUPDEMO', 'capacitive', ' demogeam6ul engicam-startup-demogeam6ul-cap', '', d)} \
-	${@bb.utils.contains('STARTUPDEMO', 'resistive', ' demogeam6ul engicam-startup-demogeam6ul', '', d)} \
+  #qtquick1 \
+	#${@bb.utils.contains('STARTUPDEMO', 'capacitive', ' demogeam6ul engicam-startup-demogeam6ul-cap', '', d)} \
+	#${@bb.utils.contains('STARTUPDEMO', 'resistive', ' demogeam6ul engicam-startup-demogeam6ul', '', d)} \
+  fincantieri_app fincantieri_service \
 "
 #PACKAGES QT
 IMAGE_INSTALL_append_isiot = " \
