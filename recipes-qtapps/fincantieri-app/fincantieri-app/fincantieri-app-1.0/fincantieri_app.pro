@@ -1,7 +1,6 @@
 TEMPLATE = app
 
-
-QT +=  qml
+QT +=  qml declarative
 CONFIG += c++11
 CONFIG+=declarative_debug
 
@@ -13,7 +12,7 @@ RESOURCES += qml.qrc
 QML_IMPORT_PATH =
 
 # Default rules for deployment.
-#include(deployment.pri)
+include(deployment.pri)
 
 HEADERS += \
 

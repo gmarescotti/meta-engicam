@@ -3,7 +3,7 @@ DESCRIPTION = "fincantieri qt app"
 SECTION = "applications"
 LICENSE = "CLOSED"
 
-DEPENDS += "qtbase"
+DEPENDS += "qtquick1 qtbase qtdeclarative "
 
 SRC_URI = " \
 	file://fincantieri-app-1.0 \	
@@ -20,4 +20,4 @@ do_install () {
           install -m 0755 ${WORKDIR}/build/fincantieri_app ${D}/usr/bin
 }
 
-RDEPENDS_${PN} = ""
+RDEPENDS_${PN} = "qtdeclarative-qmlplugins "
