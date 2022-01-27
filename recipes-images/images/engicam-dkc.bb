@@ -103,3 +103,6 @@ IMAGE_INSTALL_remove ="qt3d nativesdk-qt3d qt3d-native ruby-native"
 IMAGE_INSTALL_remove_gea  += "qtdeclarative-plugins"
 
 export IMAGE_BASENAME = "engicam-demo-qt"
+
+IMAGE_INSTALL_append += " iproute2 canutils "
+
