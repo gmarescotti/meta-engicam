@@ -88,7 +88,7 @@ IMAGE_INSTALL_append_icoremx6sx = " \
 
 #PACKAGES QT
 IMAGE_INSTALL_append_gea = " \
-  fincantieri_app fincantieri_service \
+  fincantieri-app fincantieri-service \
 "
 #PACKAGES QT
 IMAGE_INSTALL_append_isiot = " \
