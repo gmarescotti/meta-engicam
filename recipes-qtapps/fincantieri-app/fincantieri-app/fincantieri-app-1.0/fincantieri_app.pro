@@ -1,8 +1,7 @@
-TEMPLATE = app
+# TEMPLATE = app
 
-QT +=  qml declarative
+QT +=  qml
 CONFIG += c++11
-CONFIG+=declarative_debug
 
 SOURCES += main.cpp \
 
