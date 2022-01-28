@@ -19,9 +19,6 @@ IMAGE_INSTALL_append  = " \
 	qtbase-staticdev \
 	packagegroup-qt5-eng-qtcreator-debug \
 	qtimageformats-plugins \
-	qtsvg-dev \
-	qtsvg-mkspecs \
-	qtsvg-plugins \
 	qtxmlpatterns-dev \
 	qtxmlpatterns-mkspecs \
 	engicam-emmc-script \
@@ -32,7 +29,6 @@ IMAGE_INSTALL_append  = " \
 	tslib-calibrate \
 	packagegroup-fonts-truetype \
 	binutils \
-	psplash \
 	engicam-mtd-script \
 	mtd-utils imx-kobs mtd-utils-ubifs \
 	qtimageformats-dev \
@@ -40,48 +36,11 @@ IMAGE_INSTALL_append  = " \
 	opkg \
 "
 
-###############RECIPES iMX6##########################
-
-IMAGE_INSTALL_append_icoremx6 = " \
-  packagegroup-fsl-tools-gpu kernel-module-imx-gpu-viv \
-  firmware-imx \
-	qtconnectivity-dev \
-	qtconnectivity-mkspecs \
-	qtconnectivity-qmlplugins \
-	qtgraphicaleffects-qmlplugins \
-	qtimageformats-plugins \
-	qtdeclarative-dev \
-	qtdeclarative-mkspecs \
-	qtdeclarative-qmlplugins \
-	qtdeclarative-staticdev \
-	qtscript-dev \
-	qtscript-mkspecs \
-	qtmultimedia \
-	packagegroup-fsl-gstreamer1.0-full \
-	${@bb.utils.contains('STARTUPDEMO', 'resistive', ' democard engicam-startup-demo-resistive', '', d)} \
-	${@bb.utils.contains('STARTUPDEMO', 'capacitive', ' democard engicam-startup-demo-capacitive', '', d)} \
-"
-
-############################################
-
-###############RECIPES iMX6SX##########################
-
-IMAGE_INSTALL_append_icoremx6sx = " \
-  firmware-imx \
-	qtconnectivity-dev \
-	qtconnectivity-mkspecs \
-	qtconnectivity-qmlplugins \
-	qtgraphicaleffects-qmlplugins \
-	qtimageformats-plugins \
-	qtdeclarative-dev \
-	qtdeclarative-mkspecs \
-	qtdeclarative-qmlplugins \
-	qtdeclarative-staticdev \
-	qtscript-dev \
-	qtscript-mkspecs \
-	qtmultimedia \
-	${@bb.utils.contains('STARTUPDEMO', 'resistive', ' democard engicam-startup-demo-resistive', '', d)} \
-	${@bb.utils.contains('STARTUPDEMO', 'capacitive', ' democard engicam-startup-demo-capacitive', '', d)} \
+IMAGE_INSTALL_remove  = " \
+	qtsvg-dev \
+	qtsvg-mkspecs \
+	qtsvg-plugins \
+	psplash \
 "
 
 ###############RECIPES GEAM6UL##############
@@ -90,15 +49,6 @@ IMAGE_INSTALL_append_icoremx6sx = " \
 IMAGE_INSTALL_append_gea = " \
   fincantieri-app fincantieri-service \
 "
-#PACKAGES QT
-IMAGE_INSTALL_append_isiot = " \
-	qtgraphicaleffects \
-	qtimageformats-dev \
-  qtquick1 \
-	${@bb.utils.contains('STARTUPDEMO', 'capacitive', ' demogeam6ul engicam-startup-demogeam6ul-cap', '', d)} \
-	${@bb.utils.contains('STARTUPDEMO', 'resistive', ' demogeam6ul engicam-startup-demogeam6ul', '', d)} \
-"
-
 IMAGE_INSTALL_remove ="qt3d nativesdk-qt3d qt3d-native ruby-native"
 
 IMAGE_INSTALL_remove_gea  += "qtdeclarative-plugins"
