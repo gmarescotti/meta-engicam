@@ -4,17 +4,24 @@ win32 {
     QT += quick
 }
 
-nix {
+unix {
     QT +=  qml
 }
 
 CONFIG += c++11
 
-SOURCES += main.cpp \
+SOURCES += \
+    main.cpp
 
-RESOURCES += qml.qrc
+win32 {
+    RESOURCES += qml_windows.qrc
+}
 
-CONFIG += qtquickcompiler
+unix {
+    RESOURCES += qml.qrc
+}
+
+#CONFIG += qtquickcompiler
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =

@@ -13,17 +13,19 @@ int main(int argc, char *argv[])
 {
 #if defined(Q_OS_WIN)
     QGuiApplication app(argc, argv);
+    QString qrc_file = QStringLiteral("qrc:/main_windows.qml");
 #else
     QCoreApplication app(argc, argv);
+    QString qrc_file = QStringLiteral("qrc:/main.qml");
 #endif
 
     QQmlApplicationEngine engine;
 
-    // cantools_qt_init(&engine, "ixxatcan", "", 500000);
-    // modbus_qt_init(&engine, "127.0.0.1:502");
-    modbus_qt_init(&engine, ":502");
+    cantools_qt_init(&engine, "ixxatcan", "", 500000);
+    // modbus_qt_init(&engine, "127.0.0.1:502"); // client
+    modbus_qt_init(&engine, ":502"); // server
 
-    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+    engine.load(QUrl(qrc_file));
     if (engine.rootObjects().isEmpty())
         return -1;
 
