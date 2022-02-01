@@ -1,0 +1,66 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Device Hmi
+
+
+BO_ 1 test: 8 Device
+ SG_ NewSignal_0001 : 0|8@1+ (1,0) [0|0] ""  Hmi
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","Asynchronous","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "BeforePackCallback" STRING ;
+BA_DEF_ BO_  "AfterUnpackCallback" STRING ;
+BA_DEF_ BO_  "OwnerSetterSignalName" STRING ;
+BA_DEF_ SG_  "PersistentPeriodSec" INT 0 360000;
+BA_DEF_ SG_  "PersistentType" ENUM  "NoPersistent","StoreWhenChange","StoreEveryPeriodSec";
+BA_DEF_ SG_  "C2000VarReference" STRING ;
+BA_DEF_ SG_  "C2000Include" STRING ;
+BA_DEF_ SG_  "SingleOwnerSetterSignalName" STRING ;
+BA_DEF_DEF_  "GenMsgSendType" "cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "BeforePackCallback" "";
+BA_DEF_DEF_  "AfterUnpackCallback" "";
+BA_DEF_DEF_  "OwnerSetterSignalName" "";
+BA_DEF_DEF_  "PersistentPeriodSec" 0;
+BA_DEF_DEF_  "PersistentType" "NoPersistent";
+BA_DEF_DEF_  "C2000VarReference" "";
+BA_DEF_DEF_  "C2000Include" "";
+BA_DEF_DEF_  "SingleOwnerSetterSignalName" "";
+BA_ "BusType" "CAN";
+

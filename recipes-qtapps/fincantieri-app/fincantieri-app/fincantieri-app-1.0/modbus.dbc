@@ -1,0 +1,80 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: tcp_powermeter_bytronic Hmi
+
+
+BO_ 2147523649 Voltage: 4 tcp_powermeter_bytronic
+ SG_ Voltage : 7|32@0+ (1,0) [0|1000] "V"  Hmi
+
+BO_ 2147523655 Current: 4 tcp_powermeter_bytronic
+ SG_ Current : 7|32@0+ (1,0) [0|200] "A"  Hmi
+
+BO_ 2147523719 Frequency: 4 tcp_powermeter_bytronic
+ SG_ Frequency : 0|32@1- (1,0) [0|100] "Hz"  Hmi
+
+BO_ 2147523661 Active_Power: 4 tcp_powermeter_bytronic
+ SG_ Active_Power : 0|32@1- (1,0) [0|10000] "W"  Hmi
+
+BO_ 2147513673 Reactive_Power: 4 tcp_powermeter_bytronic
+ SG_ Reactive_Power : 0|32@1- (1,0) [0|10000] "W"  Hmi
+
+BO_ 2147513991 Total_Active_Energy: 4 tcp_powermeter_bytronic
+ SG_ Total_Active_Energy : 0|32@1- (1,0) [0|1000000] "WH"  Hmi
+
+BO_ 2147513993 Total_Reactive_Energy: 4 tcp_powermeter_bytronic
+ SG_ Total_Reactive_Energy : 0|32@1- (1,0) [0|1000000] "WH"  Hmi
+
+BO_ 2147513685 Phase_Angle: 4 tcp_powermeter_bytronic
+ SG_ Phase_Angle : -1|32@0- (1,0) [0|360] "gradi"  Hmi
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "StationAddress" INT 1 255;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "StationAddress" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_ "BusType" "MODBUS";
+BA_ "StationAddress" BU_ tcp_powermeter_bytronic 1;
+BA_ "StationAddress" BU_ Hmi 1;
+SIG_VALTYPE_ 2147523719 Frequency : 1;
+SIG_VALTYPE_ 2147523661 Active_Power : 1;
+SIG_VALTYPE_ 2147513673 Reactive_Power : 1;
+SIG_VALTYPE_ 2147513991 Total_Active_Energy : 1;
+SIG_VALTYPE_ 2147513993 Total_Reactive_Energy : 1;
+SIG_VALTYPE_ 2147513685 Phase_Angle : 1;
+
