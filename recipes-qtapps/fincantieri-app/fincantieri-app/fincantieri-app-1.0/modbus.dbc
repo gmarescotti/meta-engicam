@@ -90,7 +90,7 @@ BO_ 2147513698 Msg_30051: 2 Hmi
  SG_ External_Canbus_Communication_Failure : 6|1@0+ (1,0) [0|0] ""  Hmi
  SG_ External_Analog_Inputs_Lost : 5|1@0+ (1,0) [0|0] ""  Hmi
 
-BO_ 2147523650 Msg_30052: 2 Hmi
+BO_ 2147513700 Msg_30052: 2 Hmi
  SG_ DCDCA_HVHS_Overvoltage : 7|1@0+ (1,0) [0|0] ""  Hmi
  SG_ DCDCA_HVLS_Overvoltage : 6|1@0+ (1,0) [0|0] ""  Hmi
  SG_ DCDCA_HVHS_Overcurrent : 5|1@0+ (1,0) [0|0] ""  Hmi
@@ -99,7 +99,7 @@ BO_ 2147523650 Msg_30052: 2 Hmi
  SG_ A_Internal_Comms_Failure : 2|1@0+ (1,0) [0|0] ""  Hmi
  SG_ DCDCA_Overtemperature : 1|1@0+ (1,0) [0|0] ""  Hmi
 
-BO_ 2147523651 Msg_30053: 2 Hmi
+BO_ 2147513701 Msg_30053: 2 Hmi
  SG_ DCDCB_HVHS_Overvoltage : 7|1@0+ (1,0) [0|0] ""  Hmi
  SG_ DCDCB_HVLS_Overvoltage : 6|1@0+ (1,0) [0|0] ""  Hmi
  SG_ DCDCB_HVHS_Overcurrent : 5|1@0+ (1,0) [0|0] ""  Hmi
@@ -190,10 +190,12 @@ BO_ 2147513861 FC_POWER_SP: 2 Hmi
  SG_ FC_POWER_SP : 7|16@0+ (10,0) [0|0] "W"  Hmi
 
 BO_ 2147513899 FC_EVENT_CODE: 4 Hmi
- SG_ FC_EVENT_CODE : 7|32@0+ (1,0) [0|0] ""  Hmi
+ SG_ FC_EVENT_CODE1 : 7|16@0+ (1,0) [0|0] ""  Hmi
+ SG_ FC_EVENT_CODE2 : 23|16@0+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2147513901 FC_EXTENDED_INFO: 4 Hmi
- SG_ FC_EXTENDED_INFO : 7|32@0+ (1,0) [0|0] ""  Hmi
+ SG_ FC_EXTENDED_INFO2 : 23|16@0+ (1,0) [0|0] ""  Hmi
+ SG_ FC_EXTENDED_INFO1 : 7|16@0+ (1,0) [0|0] "" Vector__XXX
 
 
 

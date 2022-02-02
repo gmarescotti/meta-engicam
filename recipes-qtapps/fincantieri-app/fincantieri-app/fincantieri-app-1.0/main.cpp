@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     cantools_qt_init(&engine, "ixxatcan", "", 500000);
-    // modbus_qt_init(&engine, "127.0.0.1:502"); // client
     modbus_qt_init(&engine, ":502"); // server
 
     engine.load(QUrl(qrc_file));

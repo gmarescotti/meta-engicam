@@ -37,7 +37,6 @@ BU_: HMI ExternalTool VMS supervisor_A supervisor_B
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
- SG_ NewSignal_0017 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ TxSDO1_spare2 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ TxSDO1_spare1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
 
@@ -101,12 +100,12 @@ BO_ 1168 TxPDO4: 8 VMS
 
 BO_ 402 TxPDO1_VN1: 8 VMS
  SG_ PosMixValve : 0|8@1+ (1,0) [0|100] "%"  HMI
- SG_ TCmHsPriOut : 8|8@1- (0.1,0) [0|0] "Celsius"  HMI
+ SG_ TcmHsPriOut : 8|8@1- (0.1,0) [0|0] "Celsius"  HMI
  SG_ TcmHsSecInSp : 24|8@1- (0.1,0) [0|0] "Celsius"  HMI
  SG_ MuteH2SensExhaust : 40|1@1+ (1,0) [0|1] ""  HMI
  SG_ TxPDO1_VN1_spare1 : 41|7@1+ (1,0) [0|0] "" Vector__XXX
  SG_ TxPDO1_VN1_spare2 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
- SG_ TCmHsPriOut_b : 16|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ TcmHsPriOut_b : 16|8@1- (1,0) [0|0] "" Vector__XXX
  SG_ TcmHsSecInSp_b : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 529 RxPDO1_PC: 8 VMS
@@ -126,13 +125,13 @@ BO_ 1424 TxSDO1: 1 HMI
  SG_ TxSDO_PowerCurrentMode : 0|8@1+ (1,0) [0|1] ""  VMS
 
 BO_ 128 DcDc1: 8 VMS
- SG_ DcDc1_Running : 0|1@1+ (1,0) [0|0] ""  HMI
- SG_ DcDc1_Failure : 1|1@1+ (1,0) [0|0] ""  HMI
- SG_ DcDc1_spare1 : 2|6@1+ (1,0) [0|0] "" Vector__XXX
- SG_ DcDc1_Status : 8|8@1+ (1,0) [0|0] ""  HMI
- SG_ DcDc1_Status_Word1 : 16|16@1+ (1,0) [0|0] ""  HMI
- SG_ DcDc1_PowerAct : 32|16@1+ (1,0) [0|0] ""  HMI
- SG_ DcDc1_spare3 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Dc_Dc1_Running : 0|1@1+ (1,0) [0|0] ""  HMI
+ SG_ Dc_Dc1_Failure : 1|1@1+ (1,0) [0|0] ""  HMI
+ SG_ Dc_Dc1_spare1 : 2|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Dc_Dc1_Status : 8|8@1+ (1,0) [0|0] ""  HMI
+ SG_ Dc_Dc1_Status_Word1 : 16|16@1+ (1,0) [0|0] ""  HMI
+ SG_ Dc_Dc1_PowerAct : 32|16@1+ (1,0) [0|0] ""  HMI
+ SG_ Dc_Dc1_spare3 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1552 RxSDO1: 1 VMS
  SG_ RxSDO_PowerCurrentMode : 0|8@1+ (1,0) [0|0] ""  HMI
@@ -346,12 +345,12 @@ CM_ SG_ 1168 TxPDO4_PowerCurrentMinState "Status information about PowerCurrentM
 (reserved for future use)";
 CM_ SG_ 402 PosMixValve "Position of cooling medium mix valve in percent [%]. 0% is internal cooling loop active (no thermic energy output to customer) and 100% is complete volume flow (thermic energy) transferred to plate heat exchanger.
 A value of 255 means no information available.";
-CM_ SG_ 402 TCmHsPriOut "Temperature cool medium heat sink primary (fuel cell loop) output side (TT34) actual value. Resolu-tion is 0.1°C per digit. Unit is degree Celsius (°C).";
+CM_ SG_ 402 TcmHsPriOut "Temperature cool medium heat sink primary (fuel cell loop) output side (TT34) actual value. Resolu-tion is 0.1°C per digit. Unit is degree Celsius (°C).";
 CM_ SG_ 402 TcmHsSecInSp "Temperature cool medium heat sink secondary (customer loop) output side set point. Resolution is 0.1°C per digit. Unit is degree Celsius (°C).";
 CM_ SG_ 402 MuteH2SensExhaust "0 = Sensor signal used for safety shutdown
 1 = Sensor signal should be muted (no air volume flow -> no mixing purge gas with air -> high concen-trations operationally possible.
 For safety reasons while this signal is active (=1) gas supply can be closed by customer.";
-CM_ SG_ 402 TCmHsPriOut_b "second part";
+CM_ SG_ 402 TcmHsPriOut_b "second part";
 CM_ SG_ 402 TcmHsSecInSp_b "second part
 ";
 CM_ SG_ 529 DcxcCurrentFcSide "DCDC Measured current at Fc side in 0.1 A steps. If not supported, set to 0xFFFF.";
@@ -365,7 +364,7 @@ CM_ SG_ 1424 TxSDO_PowerCurrentMode "0: Current request
 2-255: reserved
 Can only be changed in SystemState “Standby”
 Default: 1";
-CM_ SG_ 128 DcDc1_PowerAct "DCDC actual power";
+CM_ SG_ 128 Dc_Dc1_PowerAct "DCDC actual power";
 CM_ SG_ 130 DcDc3_Err_Word1 "bitwise errors";
 CM_ SG_ 130 DcDc3_Err_Word4 "not used, spare";
 CM_ SG_ 131 DcDc4_Warn_Word2 "not used, spare";
