@@ -129,7 +129,22 @@ BO_ 128 DcDc1: 8 VMS
  SG_ Dc_Dc1_Failure : 1|1@1+ (1,0) [0|0] ""  HMI
  SG_ Dc_Dc1_spare1 : 2|6@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Dc_Dc1_Status : 8|8@1+ (1,0) [0|0] ""  HMI
- SG_ Dc_Dc1_Status_Word1 : 16|16@1+ (1,0) [0|0] ""  HMI
+ SG_ EMERGENCY_STOP_REQUEST_FBK2 : 23|1@0+ (1,0) [0|0] ""  HMI
+ SG_ ON_OFF_CMD_FBK2 : 22|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DI_0_FBK2 : 21|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DI_1_FBK2 : 20|1@0+ (1,0) [0|0] ""  HMI
+ SG_ FC_DISCONNECT_FBK2 : 19|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DI_3_FBK2 : 18|1@0+ (1,0) [0|0] ""  HMI
+ SG_ CONVERTER_READY2 : 17|1@0+ (1,0) [0|0] ""  HMI
+ SG_ CONVERTER_RUN2 : 16|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DO_02 : 31|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DO_12 : 30|1@0+ (1,0) [0|0] ""  HMI
+ SG_ ESD_FC_REQUEST2 : 29|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DO_32 : 28|1@0+ (1,0) [0|0] ""  HMI
+ SG_ POWER_DERATING_LIMIT_ACTIVE2 : 27|1@0+ (1,0) [0|0] ""  HMI
+ SG_ TEMP_DERATING_ACTIVE2 : 26|1@0+ (1,0) [0|0] ""  HMI
+ SG_ FC_Emergency_shutdown_FBK_ESD_FBK2 : 25|1@0+ (1,0) [0|0] ""  HMI
+ SG_ FC_Enable_command_FBK_CI15_FBK2 : 24|1@0+ (1,0) [0|0] ""  HMI
  SG_ Dc_Dc1_PowerAct : 32|16@1+ (1,0) [0|0] ""  HMI
  SG_ Dc_Dc1_spare3 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
 
@@ -137,15 +152,29 @@ BO_ 1552 RxSDO1: 1 VMS
  SG_ RxSDO_PowerCurrentMode : 0|8@1+ (1,0) [0|0] ""  HMI
 
 BO_ 129 DcDc2: 8 VMS
- SG_ DcDc2_PwrUnitTemp : 0|16@1+ (0.1,0) [0|0] "°C"  HMI
+ SG_ DcDc2_PwrUnitTemp : 0|16@1+ (0.1,0) [0|0] "ï¿½C"  HMI
  SG_ DcDc2_MaxAvlbCurrent : 16|16@1+ (0.1,0) [0|0] "A"  HMI
  SG_ DcDc2_spare1 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ DcDc2_MaxAvlbPwr : 48|16@1+ (0.01,0) [0|0] "kW"  HMI
 
 BO_ 130 DcDc3: 8 VMS
- SG_ DcDc3_Err_Word1 : 0|16@1+ (1,0) [0|0] ""  HMI
- SG_ DcDc3_Err_Word2 : 16|16@1+ (1,0) [0|0] ""  HMI
- SG_ DcDc3_Err_Word3 : 32|16@1+ (1,0) [0|0] ""  HMI
+ SG_ Connector_Interlock_Emergency2 : 7|1@0+ (1,0) [0|0] ""  HMI
+ SG_ External_Canbus_Communication_Failure2 : 6|1@0+ (1,0) [0|0] ""  HMI
+ SG_ External_Analog_Inputs_Lost2 : 5|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_HVHS_Overvoltage2 : 23|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_HVLS_Overvoltage2 : 22|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_HVHS_Overcurrent2 : 21|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_HVLS_Overcurrent2 : 20|1@0+ (1,0) [0|0] ""  HMI
+ SG_ A_Internal_Aux_Power_Supply_Failure2 : 19|1@0+ (1,0) [0|0] ""  HMI
+ SG_ A_Internal_Comms_Failure2 : 18|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_Overtemperature2 : 17|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCB_HVHS_Overvoltage2 : 39|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCB_HVLS_Overvoltage2 : 38|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCB_HVHS_Overcurrent2 : 37|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCB_HVLS_Overcurrent2 : 36|1@0+ (1,0) [0|0] ""  HMI
+ SG_ B_Internal_Aux_Power_Supply_Failure2 : 35|1@0+ (1,0) [0|0] ""  HMI
+ SG_ B_Internal_Comms_Failure2 : 34|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCB_Overtemperature2 : 33|1@0+ (1,0) [0|0] ""  HMI
  SG_ DcDc3_Err_Word4 : 48|16@1+ (1,0) [0|0] ""  HMI
 
 BO_ 131 DcDc4: 8 VMS
@@ -319,15 +348,15 @@ CM_ SG_ 528 RxPDO1_SystemOffRequest "Complete stop/shutdown of system and periph
 0-System will stay alive
 1-System will shut down and go OFF";
 CM_ SG_ 528 RxPDO1_FastShutdownRequest "0-No request
-1-If in SystemState “Operation” the power/current output will be very fast de-creased to zero. Afterwards the system will shut down.";
+1-If in SystemState ï¿½Operationï¿½ the power/current output will be very fast de-creased to zero. Afterwards the system will shut down.";
 CM_ SG_ 528 RxPDO1_FreezeProtectioRequest "0-No request
-1-When set while system is in SystemState “Operation” and kept active until SystemState changed to “Shutdown” then a special shut-down will be activated to get System into a freeze protected state.";
+1-When set while system is in SystemState ï¿½Operationï¿½ and kept active until SystemState changed to ï¿½Shutdownï¿½ then a special shut-down will be activated to get System into a freeze protected state.";
 CM_ SG_ 528 RxPDO1_MaintenanceCmd "Should be 0 at the moment. Reserved for future";
 CM_ SG_ 528 DCDC_RESET "0 = normal, 1 = perform reset (fault acknowledge) action";
-CM_ SG_ 400 TxPDO1_EstimatedTimeToPower "While SystemState is not “Operation”, this value predicts time in seconds [s] until Sys-temState reaches “Operation”.
-When in SystemState “Operation” this value predicts time needed to reach set point.
+CM_ SG_ 400 TxPDO1_EstimatedTimeToPower "While SystemState is not ï¿½Operationï¿½, this value predicts time in seconds [s] until Sys-temState reaches ï¿½Operationï¿½.
+When in SystemState ï¿½Operationï¿½ this value predicts time needed to reach set point.
 If value is zero (=0) no prediction available or state/set point already reached.";
-CM_ SG_ 400 TxPDO1_EstimatedTimeForShutdown "This value predicts time in seconds [s] needed for system shutdown (Time within SystemStates “Shutdown”, “EmcyShut-down”, “ErrorShutdown”).
+CM_ SG_ 400 TxPDO1_EstimatedTimeForShutdown "This value predicts time in seconds [s] needed for system shutdown (Time within SystemStates ï¿½Shutdownï¿½, ï¿½EmcyShut-downï¿½, ï¿½ErrorShutdownï¿½).
 If value is zero (=0) no prediction available or shutdown already completed.";
 CM_ SG_ 400 TxPDO1_SystemState "System state";
 CM_ SG_ 400 TxPDO1_SystemSubState "Additional information what is actually done in actual SystemState. Sometimes specified in customer specific project documentation.";
@@ -345,8 +374,8 @@ CM_ SG_ 1168 TxPDO4_PowerCurrentMinState "Status information about PowerCurrentM
 (reserved for future use)";
 CM_ SG_ 402 PosMixValve "Position of cooling medium mix valve in percent [%]. 0% is internal cooling loop active (no thermic energy output to customer) and 100% is complete volume flow (thermic energy) transferred to plate heat exchanger.
 A value of 255 means no information available.";
-CM_ SG_ 402 TcmHsPriOut "Temperature cool medium heat sink primary (fuel cell loop) output side (TT34) actual value. Resolu-tion is 0.1°C per digit. Unit is degree Celsius (°C).";
-CM_ SG_ 402 TcmHsSecInSp "Temperature cool medium heat sink secondary (customer loop) output side set point. Resolution is 0.1°C per digit. Unit is degree Celsius (°C).";
+CM_ SG_ 402 TcmHsPriOut "Temperature cool medium heat sink primary (fuel cell loop) output side (TT34) actual value. Resolu-tion is 0.1ï¿½C per digit. Unit is degree Celsius (ï¿½C).";
+CM_ SG_ 402 TcmHsSecInSp "Temperature cool medium heat sink secondary (customer loop) output side set point. Resolution is 0.1ï¿½C per digit. Unit is degree Celsius (ï¿½C).";
 CM_ SG_ 402 MuteH2SensExhaust "0 = Sensor signal used for safety shutdown
 1 = Sensor signal should be muted (no air volume flow -> no mixing purge gas with air -> high concen-trations operationally possible.
 For safety reasons while this signal is active (=1) gas supply can be closed by customer.";
@@ -358,11 +387,11 @@ CM_ SG_ 529 DcxcVoltageFcSide "Measured voltage at Fc side in 0.1 V steps. If no
 CM_ SG_ 529 DcxcCurrentLinkSide "Measured current at Link side in 0.01 A steps. If not supported, set to 0xFFFF";
 CM_ SG_ 529 DcxcVoltageLinkSide "Measured voltage at Link side in 0.1 V steps. If not supported, set to 0xFFFF";
 CM_ SG_ 401 DcxcCurrentSp "Current set point in steps of 0.1 A This set point needs to become active without any ramps within a delay of not more than 50 ms. The PM system control already generates opti-mized ramps internally.";
-CM_ SG_ 401 DcxcConnectionState "0 – Disconnected; 10 – Precharge (minus connected, small current supplied); 20 – Active (minus and plus contactors closed)";
+CM_ SG_ 401 DcxcConnectionState "0 ï¿½ Disconnected; 10 ï¿½ Precharge (minus connected, small current supplied); 20 ï¿½ Active (minus and plus contactors closed)";
 CM_ SG_ 1424 TxSDO_PowerCurrentMode "0: Current request
 1: Power request
 2-255: reserved
-Can only be changed in SystemState “Standby”
+Can only be changed in SystemState ï¿½Standbyï¿½
 Default: 1";
 CM_ SG_ 128 Dc_Dc1_PowerAct "DCDC actual power";
 CM_ SG_ 130 DcDc3_Err_Word1 "bitwise errors";
@@ -373,11 +402,11 @@ CM_ SG_ 131 DcDc4_Warn_Word4 "not used, spare";
 CM_ SG_ 1425 TxSDO_PowerCurrentReference "0: DCXC input (Fuel Cell Stack side)
 1: DCXC output (XC-Link side)
 2-255: Reserved
-Can only be changed in SystemState “Standby”
+Can only be changed in SystemState ï¿½Standbyï¿½
 Default: 0";
 CM_ SG_ 1426 TxSDO_PowerCurrentMinHandling "0: When PowerCurrentSp is below PowerCurrentMin then PowerCur-rentSp is set to PowerCurrentMin in-ternally.
 ? System may deliver more power/current than requested by cus-tomer.
-1: When PowerCurrentSp is below PowerCurrentMin, the system will switch to SystemState “ShutDown”.
+1: When PowerCurrentSp is below PowerCurrentMin, the system will switch to SystemState ï¿½ShutDownï¿½.
 Default: 0";
 BA_DEF_  "DBName" STRING ;
 BA_DEF_  "BusType" STRING ;
