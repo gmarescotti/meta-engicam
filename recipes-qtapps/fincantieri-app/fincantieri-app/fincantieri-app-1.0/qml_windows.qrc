@@ -1,13 +1,5 @@
 <RCC>
     <qresource prefix="/">
         <file>main_windows.qml</file>
-        <file>fonts/D-DIN-Bold.otf</file>
-        <file>fonts/D-DIN-Italic.otf</file>
-        <file>fonts/D-DIN.otf</file>
-        <file>fonts/D-DINCondensed-Bold.otf</file>
-        <file>fonts/D-DINCondensed.otf</file>
-        <file>fonts/D-DINExp-Bold.otf</file>
-        <file>fonts/D-DINExp-Italic.otf</file>
-        <file>fonts/D-DINExp.otf</file>
     </qresource>
 </RCC>

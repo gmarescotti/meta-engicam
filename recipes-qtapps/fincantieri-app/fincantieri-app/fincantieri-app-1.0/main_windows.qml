@@ -6,7 +6,6 @@ import QtQuick.Extras 1.4
 import QtQml 2.12
 import QtGraphicalEffects 1.12
 
-import FlatUI 1.0
 import RgmFlatUI 1.0
 
 ApplicationWindow {
@@ -15,11 +14,6 @@ ApplicationWindow {
     width: 700
     height: 620
     title: qsTr("Modbus-Canbus Switch")
-
-    FontLoader {
-        id: fontLoader
-        source: "qrc:/fonts/D-DINCondensed.otf"
-    }
 
     ListModel {
         id: nameModel
