@@ -6,7 +6,7 @@ import QtQuick.Extras 1.4
 import QtQml 2.12
 import QtGraphicalEffects 1.12
 
-import RgmFlatUI 1.0
+import VFlatUI 1.0
 
 ApplicationWindow {
     id: root
