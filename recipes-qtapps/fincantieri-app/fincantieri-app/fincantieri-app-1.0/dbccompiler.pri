@@ -67,7 +67,7 @@ QMAKE_EXTRA_COMPILERS += extra1
 extra2.name = "============= EVERY $DBC to <file>_qt.cpp <file>_qt.h ============="
 extra2.input = DBC
 extra2.output  = ${QMAKE_FILE_BASE}_qt.h ${QMAKE_FILE_BASE}_qt.cpp # ${QMAKE_FILE_BASE}_qt_init.cpp
-extra2.commands = cantools generate_qt_source ${QMAKE_FILE_IN} --signals all --bit-fields --no-strict --no-size-and-memset --no-floating-point-numbers
+extra2.commands = cantools generate_qt_source ${QMAKE_FILE_IN} --signals all --bit-fields --no-strict --no-size-and-memset
 extra2.variable_out = MOCABLE GENERATED_SOURCES HEADERS
 #extra2.depends = FORCE
 QMAKE_EXTRA_COMPILERS += extra2

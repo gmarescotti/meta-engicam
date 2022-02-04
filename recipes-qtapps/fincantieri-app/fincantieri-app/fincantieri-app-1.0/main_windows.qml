@@ -101,31 +101,15 @@ ApplicationWindow {
         Item {
             Binding {
                 target: modbus[mod_name]
-                property: 'smart_val'
-                value: cantools[can_name].smart_val
-                // delayed: true
-                Component.onCompleted: {
-                    if (cantools[can_name] === undefined) {
-                        console.debug("=======================CANTOOL==========================")
-                        console.debug(can_name)
-                        console.debug(cantools[can_name])
-                        console.debug("========================================================")
-                    }
-                }
+                property: 'smart_val' // out
+                value: cantools[can_name].val // in
+                delayed: true
             }
             Binding {
                 target: cantools[can_name]
-                property: 'val'
-                value: modbus[mod_name].smart_val
-                // delayed: true
-                Component.onCompleted: {
-                    if (modbus[mod_name] === undefined) {
-                        console.debug("===========================MODBUS=======================")
-                        console.debug(mod_name)
-                        console.debug(modbus[mod_name])
-                        console.debug("========================================================")
-                    }
-                }
+                property: 'smart_val' // out ()
+                value: modbus[mod_name].val // in
+                delayed: true
             }
         }
     }
@@ -149,6 +133,7 @@ ApplicationWindow {
                     id: pane
                     columns: 5
                     spacing: 5
+
                     LabelBoxSwitch {variable: modbus.fc_dcdc_running}
                     LabelBoxSwitch {variable: modbus.fc_dcdc_failure}
                     LabelBoxSwitch {variable: modbus.dcdc_reset2}
