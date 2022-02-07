@@ -7,11 +7,12 @@ import QtQml 2.12
 import QtGraphicalEffects 1.12
 
 import VFlatUI 1.0
+import Utilities 1.0
 
 ApplicationWindow {
     id: root
     visible: true
-    width: 700
+    width: 730
     height: 620
     title: qsTr("Modbus-Canbus Switch")
 
@@ -120,18 +121,18 @@ ApplicationWindow {
         currentIndex: tabBar.currentIndex
         anchors.margins: 10
 
-        Page {
+        Pane {
             spacing: 10
             clip: true
             background: null
             Flickable {
                 anchors.fill: parent
-                contentHeight: pane.implicitHeight
+                contentHeight: f1.height
                 flickableDirection: Flickable.AutoFlickIfNeeded
 
-                Grid {
-                    id: pane
-                    columns: 5
+                Flow {
+                    id: f1
+                    width: parent.width
                     spacing: 5
 
                     LabelBoxSwitch {variable: modbus.fc_dcdc_running}
@@ -173,19 +174,19 @@ ApplicationWindow {
                 }
             }
         }
-        Page {
+        Pane {
             spacing: 10
             clip: true
             background: null
             Flickable {
                 anchors.fill: parent
-                contentHeight: pane.implicitHeight
+                contentHeight: f2.height
                 flickableDirection: Flickable.AutoFlickIfNeeded
 
-                Grid {
-                    columns: 3
+                Flow {
+                    id: f2
+                    width: parent.width
                     spacing: 5
-                    verticalItemAlignment: Grid.AlignBottom
                     LabelSpinBox {variable: modbus.dcdc_voltage}
                     LabelSpinBox {variable: modbus.fc_dcdc_current}
                     LabelSpinBox {variable: modbus.fc_dcdc_power}
