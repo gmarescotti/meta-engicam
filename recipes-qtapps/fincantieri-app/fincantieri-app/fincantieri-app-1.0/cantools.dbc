@@ -394,7 +394,6 @@ CM_ SG_ 1424 TxSDO_PowerCurrentMode "0: Current request
 Can only be changed in SystemState �Standby�
 Default: 1";
 CM_ SG_ 128 Dc_Dc1_PowerAct "DCDC actual power";
-CM_ SG_ 130 DcDc3_Err_Word1 "bitwise errors";
 CM_ SG_ 130 DcDc3_Err_Word4 "not used, spare";
 CM_ SG_ 131 DcDc4_Warn_Word2 "not used, spare";
 CM_ SG_ 131 DcDc4_Warn_Word3 "not used, spare";
