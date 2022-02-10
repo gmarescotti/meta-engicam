@@ -10,6 +10,8 @@ inherit distro_features_check
 inherit populate_sdk
 inherit populate_sdk_${@bb.utils.contains('MACHINEOVERRIDES', 'icoremx6', 'qt5_icore', 'qt5_geam6ul', d)}
 
+IMAGE_FEATURES += " package-management "
+
 EXTRA_IMAGE_FEATURES = " debug-tweaks ssh-server-openssh tools-debug \
 			"
 IMAGE_INSTALL_append  = " \
@@ -47,6 +49,7 @@ IMAGE_INSTALL_remove  = " \
 
 #PACKAGES QT
 IMAGE_INSTALL_append_gea = " \
+  qtquick1 \
   fincantieri-app fincantieri-service \
 "
 IMAGE_INSTALL_remove ="qt3d nativesdk-qt3d qt3d-native ruby-native"

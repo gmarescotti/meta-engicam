@@ -1,5 +1,5 @@
-import QtQml 2.12
-import QtQuick 2.15
+import QtQml 2.5
+import QtQuick 2.5
 
 Timer {
     interval: 500; running: true; repeat: true
@@ -8,7 +8,7 @@ Timer {
         // modbus.voltage.val=1;
     }
 
-    ListModel {
+    property var lm: ListModel {
         id: nameModel
         ListElement { mod_name: "fc_dcdc_running"; can_name: "dc_dc1_running" }
         ListElement { mod_name: "fc_dcdc_failure"; can_name: "dc_dc1_failure" }
@@ -89,20 +89,23 @@ Timer {
         ListElement { mod_name: "fc_extended_info2"; can_name: "tx_pdo2_extended_info_b" }
     }
 
-    Repeater {
+    property var r1: Repeater {
         model: nameModel
-        Component {
+        delegate: Component {
             Binding {
                 target: modbus[mod_name]
                 property: 'smart_val' // out
                 value: cantools[can_name].val // in
-                delayed: true
             }
+        }
+    }
+    property var r2: Repeater {
+        model: nameModel
+        delegate: Component {
             Binding {
                 target: cantools[can_name]
                 property: 'smart_val' // out ()
                 value: modbus[mod_name].val // in
-                delayed: true
             }
         }
     }
