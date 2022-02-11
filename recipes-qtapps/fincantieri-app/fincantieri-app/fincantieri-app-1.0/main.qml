@@ -1,14 +1,8 @@
 import QtQml 2.5
 import QtQuick 2.5
 
-Timer {
-    interval: 500; running: true; repeat: true
-    onTriggered: {
-        console.warn("miao: ")
-        // modbus.voltage.val=1;
-    }
-
-    property var lm: ListModel {
+Item {
+    ListModel {
         id: nameModel
         ListElement { mod_name: "fc_dcdc_running"; can_name: "dc_dc1_running" }
         ListElement { mod_name: "fc_dcdc_failure"; can_name: "dc_dc1_failure" }
@@ -89,19 +83,14 @@ Timer {
         ListElement { mod_name: "fc_extended_info2"; can_name: "tx_pdo2_extended_info_b" }
     }
 
-    property var r1: Repeater {
+    Repeater {
         model: nameModel
-        delegate: Component {
+        delegate: Item {
             Binding {
                 target: modbus[mod_name]
                 property: 'smart_val' // out
                 value: cantools[can_name].val // in
             }
-        }
-    }
-    property var r2: Repeater {
-        model: nameModel
-        delegate: Component {
             Binding {
                 target: cantools[can_name]
                 property: 'smart_val' // out ()

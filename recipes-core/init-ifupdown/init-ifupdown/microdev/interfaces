@@ -5,11 +5,10 @@ auto lo
 iface lo inet loopback
 
 auto eth0
+# iface eth0 inet dhcp
 iface eth0 inet static
-        address 192.168.2.67
-        netmask 255.255.255.0
-        network 192.168.2.0
-        gateway 192.168.2.1
+    address 192.168.1.68/24
+    gateway 192.168.1.0
 
 # Wireless interfaces
 iface wlan0 inet dhcp
@@ -17,3 +16,16 @@ iface wlan0 inet dhcp
         wireless_essid any
         wpa-driver wext
         wpa-conf /etc/wpa_supplicant.conf
+
+auto can0
+  iface can0 inet manual
+  pre-up /sbin/ip link set can0 type can bitrate 500000
+  up /sbin/ifconfig can0 up
+  down /sbin/ifconfig can0 down
+
+auto can1
+  iface can1 inet manual
+  pre-up /sbin/ip link set can1 type can bitrate 500000
+  up /sbin/ifconfig can1 up
+  down /sbin/ifconfig can1 down
+

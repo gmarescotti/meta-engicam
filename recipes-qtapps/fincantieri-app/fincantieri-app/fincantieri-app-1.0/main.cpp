@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 #if defined(Q_OS_WIN)
     cantools_qt_init(&engine, "ixxatcan", "", 500000);
 #else
-    cantools_qt_init(&engine, "socketcan", "can1", 500000);
+    cantools_qt_init(&engine, "socketcan", "can0", 500000);
 #endif
     modbus_qt_init(&engine, ":502"); // server
 
