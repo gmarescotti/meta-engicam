@@ -2,8 +2,10 @@ DBC = $$files(*.dbc, false)
 FIRSTDBC = $$first(DBC)
 message(DBC=$$DBC FDBC=$$FIRSTDBC)
 
-MOC=/home/user/yocto/pyro/build/tmp/work/armv7at2hf-neon-fslc-linux-gnueabi/fincantieri-app/1.0-r0/recipe-sysroot-native/usr/bin/qt5/moc
-CANTOOLS=/bin/cantools
+linux: MOC=../recipe-sysroot-native/usr/bin/qt5/moc
+win32: MOC=moc.exe
+linux: CANTOOLS=/usr/bin/cantools
+win32: CANTOOLS=cantools
 
 CONFIG(debug, debug|release) {
     DESTDIR = debug
