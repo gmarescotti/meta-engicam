@@ -36,6 +36,41 @@ BS_:
 BU_: suprevisor Hmi
 
 
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ External_Analog_Inputs_Lost : 2|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ External_Canbus_Communication_Failure : 1|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ Connector_Interlock_Emergency : 0|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ DCDCA_Overtemperature : 6|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ A_Internal_Comms_Failure : 5|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ A_Internal_Aux_Power_Supply_Failure : 4|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ DCDCA_HVLS_Overcurrent : 3|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ DCDCA_HVHS_Overcurrent : 2|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ DCDCA_HVLS_Overvoltage : 1|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ DCDCA_HVHS_Overvoltage : 0|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ DCDCB_Overtemperature : 6|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ B_Internal_Comms_Failure : 5|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ B_Internal_Aux_Power_Supply_Failure : 4|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ DCDCB_HVLS_Overcurrent : 3|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ DCDCB_HVHS_Overcurrent : 2|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ DCDCB_HVLS_Overvoltage : 1|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ DCDCB_HVHS_Overvoltage : 0|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ FC_Enable_command_FBK_CI15_FBK : 15|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ FC_Emergency_shutdown_FBK_ESD_FBK : 14|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ TEMP_DERATING_ACTIVE : 13|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ POWER_DERATING_LIMIT_ACTIVE : 12|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ SPARE_DO_3 : 11|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ ESD_FC_REQUEST : 10|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ SPARE_DO_1 : 9|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ SPARE_DO_0 : 8|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ CONVERTER_RUN : 7|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ CONVERTER_READY : 6|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ SPARE_DI_3_FBK : 5|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ FC_DISCONNECT_FBK : 4|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ SPARE_DI_1_FBK : 3|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ SPARE_DI_0_FBK : 2|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ ON_OFF_CMD_FBK : 1|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ EMERGENCY_STOP_REQUEST_FBK : 0|1@1+ (1,0) [0|0] ""  Hmi
+
 BO_ 2147523649 FC_DCDC_STATUS: 2 Hmi
  SG_ FC_DCDC_RUNNING : 0|1@1+ (1,0) [0|0] ""  Hmi
  SG_ FC_DCDC_FAILURE : 1|1@1+ (1,0) [0|0] ""  Hmi
@@ -44,13 +79,13 @@ BO_ 2147523651 DCDC_VOLTAGE: 2 Hmi
  SG_ DCDC_VOLTAGE : 0|16@1+ (0.1,0) [0|0] "V"  Hmi
 
 BO_ 2147523652 FC_DCDC_CURRENT: 2 Hmi
- SG_ FC_DCDC_CURRENT : 0|16@1+ (0.01,0) [0|0] "A"  Hmi
+ SG_ FC_DCDC_CURRENT : 0|16@1- (0.01,0) [0|0] "A"  Hmi
 
 BO_ 2147523653 FC_DCDC_POWER: 2 Hmi
- SG_ FC_DCDC_POWER : 0|16@1+ (0.01,0) [0|0] "kW"  Hmi
+ SG_ FC_DCDC_POWER : 0|16@1- (0.01,0) [0|0] "kW"  Hmi
 
 BO_ 2147523654 FC_DCDC_POWER_LIMITATION: 2 Hmi
- SG_ FC_DCDC_POWER_LIMITATION : 0|16@1+ (0.01,0) [0|0] "kW"  Hmi
+ SG_ FC_DCDC_POWER_LIMITATION : 0|16@1- (0.01,0) [0|0] "kW"  Hmi
 
 BO_ 2147523655 DCDC_COMMAND: 2 Hmi
  SG_ DCDC_RESET2 : 0|1@1+ (1,0) [0|0] ""  Hmi
@@ -85,28 +120,14 @@ BO_ 2147513657 DC_BUS_VOLTAGE: 2 Hmi
 BO_ 2147513658 DC_BUS_CURRENT: 2 Hmi
  SG_ DC_BUS_CURRENT : 0|16@1+ (0.01,0) [0|0] "A"  Hmi
 
-BO_ 2147513698 Msg_30051: 2 Hmi
- SG_ Connector_Interlock_Emergency : 0|1@1+ (1,0) [0|0] ""  Hmi
- SG_ External_Canbus_Communication_Failure : 1|1@1+ (1,0) [0|0] ""  Hmi
- SG_ External_Analog_Inputs_Lost : 2|1@1+ (1,0) [0|0] ""  Hmi
+BO_ 2147513699 Msg_30051: 2 Hmi
+ SG_ DCDC_ERROR_WORD_1 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2147513700 Msg_30052: 2 Hmi
- SG_ DCDCA_HVHS_Overvoltage : 0|1@1+ (1,0) [0|0] ""  Hmi
- SG_ DCDCA_HVLS_Overvoltage : 1|1@1+ (1,0) [0|0] ""  Hmi
- SG_ DCDCA_HVHS_Overcurrent : 2|1@1+ (1,0) [0|0] ""  Hmi
- SG_ DCDCA_HVLS_Overcurrent : 3|1@1+ (1,0) [0|0] ""  Hmi
- SG_ A_Internal_Aux_Power_Supply_Failure : 4|1@1+ (1,0) [0|0] ""  Hmi
- SG_ A_Internal_Comms_Failure : 5|1@1+ (1,0) [0|0] ""  Hmi
- SG_ DCDCA_Overtemperature : 6|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ DCDC_ERROR_WORD_2 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2147513701 Msg_30053: 2 Hmi
- SG_ DCDCB_HVHS_Overvoltage : 0|1@1+ (1,0) [0|0] ""  Hmi
- SG_ DCDCB_HVLS_Overvoltage : 1|1@1+ (1,0) [0|0] ""  Hmi
- SG_ DCDCB_HVHS_Overcurrent : 2|1@1+ (1,0) [0|0] ""  Hmi
- SG_ DCDCB_HVLS_Overcurrent : 3|1@1+ (1,0) [0|0] ""  Hmi
- SG_ B_Internal_Aux_Power_Supply_Failure : 4|1@1+ (1,0) [0|0] ""  Hmi
- SG_ B_Internal_Comms_Failure : 5|1@1+ (1,0) [0|0] ""  Hmi
- SG_ DCDCB_Overtemperature : 6|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ DCDC_ERROR_WORD_3 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2147513709 DCDC_WARNING_WORD_1: 2 Hmi
  SG_ DCDC_WARNING_WORD_1 : 0|16@1+ (1,0) [0|0] "A"  Hmi
@@ -118,22 +139,7 @@ BO_ 2147513711 DCDC_WARNING_WORD_3: 2 Hmi
  SG_ DCDC_WARNING_WORD_3 : 0|16@1+ (1,0) [0|0] "A"  Hmi
 
 BO_ 2147513749 Msg_30101: 2 Hmi
- SG_ EMERGENCY_STOP_REQUEST_FBK : 0|1@1+ (1,0) [0|0] ""  Hmi
- SG_ ON_OFF_CMD_FBK : 1|1@1+ (1,0) [0|0] ""  Hmi
- SG_ SPARE_DI_0_FBK : 2|1@1+ (1,0) [0|0] ""  Hmi
- SG_ SPARE_DI_1_FBK : 3|1@1+ (1,0) [0|0] ""  Hmi
- SG_ FC_DISCONNECT_FBK : 4|1@1+ (1,0) [0|0] ""  Hmi
- SG_ SPARE_DI_3_FBK : 5|1@1+ (1,0) [0|0] ""  Hmi
- SG_ CONVERTER_READY : 6|1@1+ (1,0) [0|0] ""  Hmi
- SG_ CONVERTER_RUN : 7|1@1+ (1,0) [0|0] ""  Hmi
- SG_ SPARE_DO_0 : 8|1@1+ (1,0) [0|0] ""  Hmi
- SG_ SPARE_DO_1 : 9|1@1+ (1,0) [0|0] ""  Hmi
- SG_ ESD_FC_REQUEST : 10|1@1+ (1,0) [0|0] ""  Hmi
- SG_ SPARE_DO_3 : 11|1@1+ (1,0) [0|0] ""  Hmi
- SG_ POWER_DERATING_LIMIT_ACTIVE : 12|1@1+ (1,0) [0|0] ""  Hmi
- SG_ TEMP_DERATING_ACTIVE : 13|1@1+ (1,0) [0|0] ""  Hmi
- SG_ FC_Emergency_shutdown_FBK_ESD_FBK : 14|1@1+ (1,0) [0|0] ""  Hmi
- SG_ FC_Enable_command_FBK_CI15_FBK : 15|1@1+ (1,0) [0|0] ""  Hmi
+ SG_ DCDC_STATUS_WORD_1 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2147523849 PowerCurrentMode: 2 Hmi
  SG_ PowerCurrentMode : 0|8@1+ (1,0) [0|0] ""  Hmi
@@ -157,10 +163,10 @@ BO_ 2147513850 Pos_Mix_Valve: 2 Hmi
  SG_ Pos_Mix_Valve2 : 0|8@1+ (1,0) [0|0] "%"  Hmi
 
 BO_ 2147513851 Tcm_Hs_Pri_Out: 2 Hmi
- SG_ Tcm_Hs_Pri_Out2 : 0|16@1+ (0.1,0) [0|0] "°C"  Hmi
+ SG_ Tcm_Hs_Pri_Out2 : 0|16@1- (0.1,0) [0|0] "°C"  Hmi
 
 BO_ 2147513852 Tcm_Hs_Sec_In_Sp: 2 Hmi
- SG_ Tcm_Hs_Sec_In_Sp2 : 0|16@1+ (0.1,0) [0|0] "°C"  Hmi
+ SG_ Tcm_Hs_Sec_In_Sp2 : 0|16@1- (0.1,0) [0|0] "°C"  Hmi
 
 BO_ 2147513853 FC_POWER_ACT: 2 Hmi
  SG_ FC_POWER_ACT : 0|16@1+ (10,0) [0|0] "W"  Hmi
@@ -175,7 +181,7 @@ BO_ 2147513856 FC_POWER_MAX: 2 Hmi
  SG_ FC_POWER_MAX : 0|16@1+ (10,0) [0|0] "W"  Hmi
 
 BO_ 2147513857 FC_POWER_MAX_STATE: 2 Hmi
- SG_ FC_POWER_MAX_STATE : 0|16@1+ (10,0) [0|0] "W"  Hmi
+ SG_ FC_POWER_MAX_STATE : 0|16@1+ (1,0) [0|0] "W"  Hmi
 
 BO_ 2147513858 FC_POWER_MIN: 2 Hmi
  SG_ FC_POWER_MIN : 0|16@1+ (10,0) [0|0] "W"  Hmi

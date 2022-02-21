@@ -39,6 +39,41 @@ BU_: HMI ExternalTool VMS supervisor_A supervisor_B
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ TxSDO1_spare2 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ TxSDO1_spare1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCDCB_Overtemperature2 : 33|1@0+ (1,0) [0|0] ""  HMI
+ SG_ B_Internal_Comms_Failure2 : 34|1@0+ (1,0) [0|0] ""  HMI
+ SG_ B_Internal_Aux_Power_Supply_Failure2 : 35|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCB_HVLS_Overcurrent2 : 36|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCB_HVHS_Overcurrent2 : 37|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCB_HVLS_Overvoltage2 : 38|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCB_HVHS_Overvoltage2 : 39|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_Overtemperature2 : 17|1@0+ (1,0) [0|0] ""  HMI
+ SG_ A_Internal_Comms_Failure2 : 18|1@0+ (1,0) [0|0] ""  HMI
+ SG_ A_Internal_Aux_Power_Supply_Failure2 : 19|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_HVLS_Overcurrent2 : 20|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_HVHS_Overcurrent2 : 21|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_HVLS_Overvoltage2 : 22|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_HVHS_Overvoltage2 : 23|1@0+ (1,0) [0|0] ""  HMI
+ SG_ External_Analog_Inputs_Lost2 : 5|1@0+ (1,0) [0|0] ""  HMI
+ SG_ External_Canbus_Communication_Failure2 : 6|1@0+ (1,0) [0|0] ""  HMI
+ SG_ Connector_Interlock_Emergency2 : 7|1@0+ (1,0) [0|0] ""  HMI
+ SG_ FC_Enable_command_FBK_CI15_FBK2 : 24|1@0+ (1,0) [0|0] ""  HMI
+ SG_ FC_Emergency_shutdown_FBK_ESD_FBK2 : 25|1@0+ (1,0) [0|0] ""  HMI
+ SG_ TEMP_DERATING_ACTIVE2 : 26|1@0+ (1,0) [0|0] ""  HMI
+ SG_ POWER_DERATING_LIMIT_ACTIVE2 : 27|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DO_32 : 28|1@0+ (1,0) [0|0] ""  HMI
+ SG_ ESD_FC_REQUEST2 : 29|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DO_12 : 30|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DO_02 : 31|1@0+ (1,0) [0|0] ""  HMI
+ SG_ CONVERTER_RUN2 : 16|1@0+ (1,0) [0|0] ""  HMI
+ SG_ CONVERTER_READY2 : 17|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DI_3_FBK2 : 18|1@0+ (1,0) [0|0] ""  HMI
+ SG_ FC_DISCONNECT_FBK2 : 19|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DI_1_FBK2 : 20|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DI_0_FBK2 : 21|1@0+ (1,0) [0|0] ""  HMI
+ SG_ ON_OFF_CMD_FBK2 : 22|1@0+ (1,0) [0|0] ""  HMI
+ SG_ EMERGENCY_STOP_REQUEST_FBK2 : 23|1@0+ (1,0) [0|0] ""  HMI
+ SG_ TcmHsPriOut_b : 16|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ TcmHsSecInSp_b : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1968 IsoTpRequest: 8 ExternalTool
  SG_ data0 : 0|8@1+ (1,0) [0|0] ""  VMS
@@ -88,7 +123,7 @@ BO_ 656 TxPDO2: 8 VMS
 
 BO_ 912 TxPDO3: 8 VMS
  SG_ TxPDO3_PowerCurrentAct : 0|16@1+ (10,0) [0|0] "W"  HMI
- SG_ TxPDO3_PowerCurrentPeripheral : 16|16@1+ (1,0) [0|0] "W"  HMI
+ SG_ TxPDO3_PowerCurrentPeripheral : 16|16@1+ (10,0) [0|0] "W"  HMI
  SG_ TxPDO3_PowerCurrentOpt : 32|16@1+ (10,0) [0|0] "W"  HMI
  SG_ TxPDO3_spare1 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
 
@@ -100,13 +135,11 @@ BO_ 1168 TxPDO4: 8 VMS
 
 BO_ 402 TxPDO1_VN1: 8 VMS
  SG_ PosMixValve : 0|8@1+ (1,0) [0|100] "%"  HMI
- SG_ TcmHsPriOut : 8|8@1- (0.1,0) [0|0] "Celsius"  HMI
- SG_ TcmHsSecInSp : 24|8@1- (0.1,0) [0|0] "Celsius"  HMI
+ SG_ TcmHsPriOut : 8|16@1- (0.1,0) [0|0] "Celsius"  HMI
+ SG_ TcmHsSecInSp : 24|16@1- (0.1,0) [0|0] "Celsius"  HMI
  SG_ MuteH2SensExhaust : 40|1@1+ (1,0) [0|1] ""  HMI
  SG_ TxPDO1_VN1_spare1 : 41|7@1+ (1,0) [0|0] "" Vector__XXX
  SG_ TxPDO1_VN1_spare2 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
- SG_ TcmHsPriOut_b : 16|8@1- (1,0) [0|0] "" Vector__XXX
- SG_ TcmHsSecInSp_b : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 529 RxPDO1_PC: 8 VMS
  SG_ DcxcCurrentFcSide : 0|16@1+ (0.1,0) [0|546] "A"  HMI
@@ -129,24 +162,9 @@ BO_ 128 DcDc1: 8 VMS
  SG_ Dc_Dc1_Failure : 1|1@1+ (1,0) [0|0] ""  HMI
  SG_ Dc_Dc1_spare1 : 2|6@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Dc_Dc1_Status : 8|8@1+ (1,0) [0|0] ""  HMI
- SG_ EMERGENCY_STOP_REQUEST_FBK2 : 23|1@0+ (1,0) [0|0] ""  HMI
- SG_ ON_OFF_CMD_FBK2 : 22|1@0+ (1,0) [0|0] ""  HMI
- SG_ SPARE_DI_0_FBK2 : 21|1@0+ (1,0) [0|0] ""  HMI
- SG_ SPARE_DI_1_FBK2 : 20|1@0+ (1,0) [0|0] ""  HMI
- SG_ FC_DISCONNECT_FBK2 : 19|1@0+ (1,0) [0|0] ""  HMI
- SG_ SPARE_DI_3_FBK2 : 18|1@0+ (1,0) [0|0] ""  HMI
- SG_ CONVERTER_READY2 : 17|1@0+ (1,0) [0|0] ""  HMI
- SG_ CONVERTER_RUN2 : 16|1@0+ (1,0) [0|0] ""  HMI
- SG_ SPARE_DO_02 : 31|1@0+ (1,0) [0|0] ""  HMI
- SG_ SPARE_DO_12 : 30|1@0+ (1,0) [0|0] ""  HMI
- SG_ ESD_FC_REQUEST2 : 29|1@0+ (1,0) [0|0] ""  HMI
- SG_ SPARE_DO_32 : 28|1@0+ (1,0) [0|0] ""  HMI
- SG_ POWER_DERATING_LIMIT_ACTIVE2 : 27|1@0+ (1,0) [0|0] ""  HMI
- SG_ TEMP_DERATING_ACTIVE2 : 26|1@0+ (1,0) [0|0] ""  HMI
- SG_ FC_Emergency_shutdown_FBK_ESD_FBK2 : 25|1@0+ (1,0) [0|0] ""  HMI
- SG_ FC_Enable_command_FBK_CI15_FBK2 : 24|1@0+ (1,0) [0|0] ""  HMI
  SG_ Dc_Dc1_PowerAct : 32|16@1+ (1,0) [0|0] ""  HMI
- SG_ Dc_Dc1_spare3 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Dc_Dc1_spare3 : 48|16@1+ (10,0) [0|0] "W" Vector__XXX
+ SG_ Dc_Dc1_StatusWord1 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1552 RxSDO1: 1 VMS
  SG_ RxSDO_PowerCurrentMode : 0|8@1+ (1,0) [0|0] ""  HMI
@@ -158,24 +176,10 @@ BO_ 129 DcDc2: 8 VMS
  SG_ DcDc2_MaxAvlbPwr : 48|16@1+ (0.01,0) [0|0] "kW"  HMI
 
 BO_ 130 DcDc3: 8 VMS
- SG_ Connector_Interlock_Emergency2 : 7|1@0+ (1,0) [0|0] ""  HMI
- SG_ External_Canbus_Communication_Failure2 : 6|1@0+ (1,0) [0|0] ""  HMI
- SG_ External_Analog_Inputs_Lost2 : 5|1@0+ (1,0) [0|0] ""  HMI
- SG_ DCDCA_HVHS_Overvoltage2 : 23|1@0+ (1,0) [0|0] ""  HMI
- SG_ DCDCA_HVLS_Overvoltage2 : 22|1@0+ (1,0) [0|0] ""  HMI
- SG_ DCDCA_HVHS_Overcurrent2 : 21|1@0+ (1,0) [0|0] ""  HMI
- SG_ DCDCA_HVLS_Overcurrent2 : 20|1@0+ (1,0) [0|0] ""  HMI
- SG_ A_Internal_Aux_Power_Supply_Failure2 : 19|1@0+ (1,0) [0|0] ""  HMI
- SG_ A_Internal_Comms_Failure2 : 18|1@0+ (1,0) [0|0] ""  HMI
- SG_ DCDCA_Overtemperature2 : 17|1@0+ (1,0) [0|0] ""  HMI
- SG_ DCDCB_HVHS_Overvoltage2 : 39|1@0+ (1,0) [0|0] ""  HMI
- SG_ DCDCB_HVLS_Overvoltage2 : 38|1@0+ (1,0) [0|0] ""  HMI
- SG_ DCDCB_HVHS_Overcurrent2 : 37|1@0+ (1,0) [0|0] ""  HMI
- SG_ DCDCB_HVLS_Overcurrent2 : 36|1@0+ (1,0) [0|0] ""  HMI
- SG_ B_Internal_Aux_Power_Supply_Failure2 : 35|1@0+ (1,0) [0|0] ""  HMI
- SG_ B_Internal_Comms_Failure2 : 34|1@0+ (1,0) [0|0] ""  HMI
- SG_ DCDCB_Overtemperature2 : 33|1@0+ (1,0) [0|0] ""  HMI
- SG_ DcDc3_Err_Word4 : 48|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc3_Err_Word1 : 0|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc3_Err_Word2 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DcDc3_Err_Word3 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DcDc3_Err_Word4 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 131 DcDc4: 8 VMS
  SG_ DcDc4_Warn_Word1 : 0|16@1+ (1,0) [0|0] ""  HMI
@@ -341,6 +345,9 @@ CM_ BU_ ExternalTool "External Diagnostic Tool";
 CM_ BU_ VMS "FC02 scheda interfaccia";
 CM_ BU_ supervisor_A "Supervisor A";
 CM_ BU_ supervisor_B "Supervisor B";
+CM_ SG_ 3221225472 TcmHsPriOut_b "second part";
+CM_ SG_ 3221225472 TcmHsSecInSp_b "second part
+";
 CM_ BO_ 1968 "KWP2000 request";
 CM_ BO_ 1989 "KWP2000 response";
 CM_ SG_ 528 RxPDO1_PowerCurrentMax "maximum power limit from PMS";
@@ -379,9 +386,6 @@ CM_ SG_ 402 TcmHsSecInSp "Temperature cool medium heat sink secondary (customer 
 CM_ SG_ 402 MuteH2SensExhaust "0 = Sensor signal used for safety shutdown
 1 = Sensor signal should be muted (no air volume flow -> no mixing purge gas with air -> high concen-trations operationally possible.
 For safety reasons while this signal is active (=1) gas supply can be closed by customer.";
-CM_ SG_ 402 TcmHsPriOut_b "second part";
-CM_ SG_ 402 TcmHsSecInSp_b "second part
-";
 CM_ SG_ 529 DcxcCurrentFcSide "DCDC Measured current at Fc side in 0.1 A steps. If not supported, set to 0xFFFF.";
 CM_ SG_ 529 DcxcVoltageFcSide "Measured voltage at Fc side in 0.1 V steps. If not supported, set to 0xFFFF.";
 CM_ SG_ 529 DcxcCurrentLinkSide "Measured current at Link side in 0.01 A steps. If not supported, set to 0xFFFF";
@@ -394,7 +398,8 @@ CM_ SG_ 1424 TxSDO_PowerCurrentMode "0: Current request
 Can only be changed in SystemState �Standby�
 Default: 1";
 CM_ SG_ 128 Dc_Dc1_PowerAct "DCDC actual power";
-CM_ SG_ 130 DcDc3_Err_Word4 "not used, spare";
+CM_ SG_ 128 Dc_Dc1_spare3 "pwr setpoint sent to the FC by the DCDC (interpreted Analog in)";
+CM_ SG_ 130 DcDc3_Err_Word1 "";
 CM_ SG_ 131 DcDc4_Warn_Word2 "not used, spare";
 CM_ SG_ 131 DcDc4_Warn_Word3 "not used, spare";
 CM_ SG_ 131 DcDc4_Warn_Word4 "not used, spare";
