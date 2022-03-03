@@ -7,8 +7,9 @@ iface lo inet loopback
 auto eth0
 # iface eth0 inet dhcp
 iface eth0 inet static
-    address 192.168.1.68/24
+    address 192.168.1.68
     gateway 192.168.1.0
+    netmask 255.255.255.0
 
 # Wireless interfaces
 iface wlan0 inet dhcp
