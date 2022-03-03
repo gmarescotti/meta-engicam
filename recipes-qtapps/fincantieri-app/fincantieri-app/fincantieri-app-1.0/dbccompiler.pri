@@ -19,7 +19,7 @@ INCLUDEPATH += $$DESTDIR
 
 extraX.name = "============= (AT LEAST ONE $DBC) to mycan.cpp mycan.h ============="
 extraX.input = FIRSTDBC #  consider only first dbc (generate only once)
-extraX.output  = mycan.h mycan.cpp
+extraX.output  = mycan.cpp
 extraX.commands = $$CANTOOLS generate_qt_can_source # -o $$DESTDIR
 extraX.CONFIG = no_link target_predeps
 extraX.variable_out = GENERATED_SOURCES
@@ -29,7 +29,7 @@ QMAKE_EXTRA_COMPILERS += extraX
 
 extraX2.name = "============= (AT LEAST ONE $DBC) to mymodbus.cpp mymodbus.h ============="
 extraX2.input = FIRSTDBC #  consider only first dbc (generate only once)
-extraX2.output  = mymodbus.h mymodbus.cpp
+extraX2.output  = mymodbus.cpp
 extraX2.commands = $$CANTOOLS generate_qt_modbus_source # -o $$DESTDIR
 extraX2.CONFIG = no_link target_predeps
 extraX2.variable_out = GENERATED_SOURCES
@@ -58,7 +58,7 @@ QMAKE_EXTRA_COMPILERS += extraY2
 
 extra1.name = "============= EVERY $DBC to <file>.c <file>.h ============="
 extra1.input = DBC
-extra1.output  = ${QMAKE_FILE_BASE}.c ${QMAKE_FILE_BASE}.h
+extra1.output  = ${QMAKE_FILE_BASE}.c
 extra1.commands = $$CANTOOLS generate_c_source --bit-fields --no-range-check --no-size-and-memset --no-strict ${QMAKE_FILE_IN}
 extra1.CONFIG = no_link target_predeps
 extra1.variable_out = GENERATED_SOURCES
@@ -68,7 +68,7 @@ QMAKE_EXTRA_COMPILERS += extra1
 
 extra2.name = "============= EVERY $DBC to <file>_qt.cpp <file>_qt.h ============="
 extra2.input = DBC
-extra2.output  = ${QMAKE_FILE_BASE}_qt.h ${QMAKE_FILE_BASE}_qt.cpp # ${QMAKE_FILE_BASE}_qt_init.cpp
+extra2.output  = ${QMAKE_FILE_BASE}_qt.cpp # ${QMAKE_FILE_BASE}_qt_init.cpp
 extra2.commands = $$CANTOOLS generate_qt_source ${QMAKE_FILE_IN} --signals all --bit-fields --no-strict --no-size-and-memset
 extra2.CONFIG = no_link target_predeps
 extra2.variable_out = GENERATED_SOURCES
