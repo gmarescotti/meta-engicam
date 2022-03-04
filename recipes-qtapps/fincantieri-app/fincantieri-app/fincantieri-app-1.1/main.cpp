@@ -6,7 +6,7 @@
 #include <QCoreApplication>
 #endif
 
-void cantools_qt_init(QQmlApplicationEngine *engine, QString plugin, QString device, quint32 bitrate);
+void cantools_qt_init(QQmlApplicationEngine *engine, QString plugin, QString device, quint32 bitrate, int sniffer_max_size);
 void modbus_qt_init(QQmlApplicationEngine *engine, QString ip);
 
 int main(int argc, char *argv[])
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 #if defined(Q_OS_WIN)
     cantools_qt_init(&engine, "ixxatcan", "", 500000);
 #else
-    cantools_qt_init(&engine, "socketcan", "can0", 500000);
+    cantools_qt_init(&engine, "socketcan", "can0", 500000, 0 /* disable can sniffer */);
 #endif
     modbus_qt_init(&engine, ":502"); // server
 
