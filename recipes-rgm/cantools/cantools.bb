@@ -5,9 +5,9 @@ LICENSE = "CLOSED"
 
 inherit setuptools3
 
-SRC_URI = "http://intranet.rgm.it/pip/cantools/cantools-36.4.7.tar.gz"
-SRC_URI[md5sum] = "0c630a19627674b1fb36898442d454cc"
+SRC_URI = "http://intranet.rgm.it/pip/cantools/cantools-36.4.8.tar.gz"
+SRC_URI[md5sum] = "380c203054cd9266b1d917522134d656"
 
-S = "${WORKDIR}/cantools-36.4.7"
+S = "${WORKDIR}/cantools-36.4.8"
 
 DEPENDS += " "
