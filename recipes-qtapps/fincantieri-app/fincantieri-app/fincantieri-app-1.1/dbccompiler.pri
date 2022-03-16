@@ -18,22 +18,38 @@ INCLUDEPATH += $$DESTDIR
 ###########################################
 
 extraX.name = "============= (AT LEAST ONE $DBC) to mycan.cpp mycan.h ============="
+
 extraX.input = FIRSTDBC #  consider only first dbc (generate only once)
-extraX.output  = mycan.cpp
+extraX.output  = mycan.h
 extraX.commands = $$CANTOOLS generate_qt_can_source # -o $$DESTDIR
 extraX.CONFIG = no_link target_predeps
-extraX.variable_out = GENERATED_SOURCES
+extraX.variable_out = MOCABLE
 QMAKE_EXTRA_COMPILERS += extraX
+
+extraXX.input = FIRSTDBC #  consider only first dbc (generate only once)
+extraXX.output  = mycan.cpp
+extraXX.commands = type nul >> ${QMAKE_FILE_OUT}
+extraXX.CONFIG = no_link target_predeps
+extraXX.variable_out = GENERATED_SOURCES
+QMAKE_EXTRA_COMPILERS += extraXX
 
 ###########################################
 
 extraX2.name = "============= (AT LEAST ONE $DBC) to mymodbus.cpp mymodbus.h ============="
 extraX2.input = FIRSTDBC #  consider only first dbc (generate only once)
-extraX2.output  = mymodbus.cpp
+extraX2.output  = mymodbus.h
 extraX2.commands = $$CANTOOLS generate_qt_modbus_source # -o $$DESTDIR
 extraX2.CONFIG = no_link target_predeps
-extraX2.variable_out = GENERATED_SOURCES
+extraX2.variable_out = MOCABLE
 QMAKE_EXTRA_COMPILERS += extraX2
+
+extraXX2.name = "============= (AT LEAST ONE $DBC) to mymodbus.cpp mymodbus.h ============="
+extraXX2.input = FIRSTDBC #  consider only first dbc (generate only once)
+extraXX2.output  = mymodbus.cpp
+extraXX2.commands = type nul >> ${QMAKE_FILE_OUT}
+extraXX2.CONFIG = no_link
+extraXX2.variable_out = GENERATED_SOURCES
+QMAKE_EXTRA_COMPILERS += extraXX2
 
 ###########################################
 
@@ -42,7 +58,7 @@ extraY.input = FIRSTDBC #  consider only first dbc (generate only once)
 extraY.output  = myabstractitemmodel.h
 extraY.commands = $$CANTOOLS generate_qt_model_source
 extraY.CONFIG = no_link target_predeps
-#extraY.variable_out = HEADERS
+extraY.variable_out = MOCABLE
 QMAKE_EXTRA_COMPILERS += extraY
 
 extraY2.name = "============= fake ============="
@@ -67,25 +83,30 @@ QMAKE_EXTRA_COMPILERS += extra1
 ###########################################
 
 extra2.name = "============= EVERY $DBC to <file>_qt.cpp <file>_qt.h ============="
+
 extra2.input = DBC
-extra2.output  = ${QMAKE_FILE_BASE}_qt.cpp # ${QMAKE_FILE_BASE}_qt_init.cpp
+extra2.output  = ${QMAKE_FILE_BASE}_qt.h
 extra2.commands = $$CANTOOLS generate_qt_source ${QMAKE_FILE_IN} --signals all --bit-fields --no-strict --no-size-and-memset
 extra2.CONFIG = no_link target_predeps
-extra2.variable_out = GENERATED_SOURCES
+extra2.variable_out = MOCABLE
 QMAKE_EXTRA_COMPILERS += extra2
+
+extra22.input = DBC
+extra22.output  = ${QMAKE_FILE_BASE}_qt.cpp
+extra22.commands = type nul >> ${QMAKE_FILE_OUT}
+extra22.CONFIG = no_link target_predeps
+extra22.variable_out = GENERATED_SOURCES
+QMAKE_EXTRA_COMPILERS += extra22
+
+###########################################
 
 post2.name = "============= EVERY $DBC to <file>_qt_init.cpp ============="
 post2.input = DBC
 post2.output  = ${QMAKE_FILE_BASE}_qt_init.cpp
 post2.commands = type nul >> ${QMAKE_FILE_OUT}
-post2.CONFIG = no_link target_predeps
-#post2.depends = ${QMAKE_FILE_BASE}_qt.h
+post2.CONFIG = no_link
 post2.variable_out = GENERATED_SOURCES
 QMAKE_EXTRA_COMPILERS += post2
-
-###########################################
-
-MOCABLE = mycan.h mymodbus.h myabstractitemmodel.h $$replace(DBC, ".dbc", "_qt.h")
 
 ###########################################
 
@@ -99,11 +120,12 @@ QMAKE_EXTRA_COMPILERS += extra3
 
 ###########################################
 
-DATABASES=$$replace(DBC, ".dbc", "")
-MYMOCS=$$join(DATABASES, '_qt.cpp moc_', moc_, _qt.cpp)
-MYMOCS2=$$split(MYMOCS, " ")
+#DATABASES=$$replace(DBC, ".dbc", "")
+#MYMOCS=$$join(DATABASES, '_qt.cpp moc_', moc_, _qt.cpp)
+#MYMOCS2=$$split(MYMOCS, " ")
 
 #GENERATED_SOURCES = mycan.cpp mymodbus.cpp moc_mymodbus.cpp moc_mycan.cpp myabstractitemmodel.cpp moc_myabstractitemmodel.cpp $$replace(DBC, ".dbc", ".c") $$replace(DBC, ".dbc", "_qt.cpp") $$replace(DBC, ".dbc", "_qt_init.cpp") $$MYMOCS2
-HEADERS = $$replace(DBC, ".dbc", ".h") $$replace(DBC, ".dbc", "_qt.h")
+# HEADERS = $$replace(DBC, ".dbc", ".h") $$replace(DBC, ".dbc", "_qt.h")
+# SOURCES = mycan.cpp mymodbus.cpp myabstractitemmodel.cpp $$replace(DBC, ".dbc", ".c") $$replace(DBC, ".dbc", "_qt.cpp") $$replace(DBC, ".dbc", "_qt_init.cpp")
 
 # system( echo 2 1>&2 )

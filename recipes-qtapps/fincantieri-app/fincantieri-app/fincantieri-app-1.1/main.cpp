@@ -6,7 +6,7 @@
 #include <QCoreApplication>
 #endif
 
-void cantools_qt_init(QQmlApplicationEngine *engine, QString plugin, QString device, quint32 bitrate, int sniffer_max_size);
+void cantools_qt_init(QQmlApplicationEngine *engine, QString plugin, QString device, quint32 bitrate, int sniffer_max_size=0);
 void modbus_qt_init(QQmlApplicationEngine *engine, QString ip);
 
 int main(int argc, char *argv[])
