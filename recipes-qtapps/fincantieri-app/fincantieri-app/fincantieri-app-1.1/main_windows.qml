@@ -81,7 +81,7 @@ ApplicationWindow {
             }
             Binding {
                 target: cantools[can_name]
-                property: 'smart_val' // out ()
+                property: 'val' // out ()
                 value: modbus[mod_name].val // in
                 delayed: true
             }
