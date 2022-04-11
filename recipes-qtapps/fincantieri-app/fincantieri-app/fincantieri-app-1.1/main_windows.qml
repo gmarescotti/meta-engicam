@@ -88,6 +88,43 @@ ApplicationWindow {
         }
     }
 
+    Timer {
+        interval: 500; running: true; repeat: true
+        onTriggered: {
+            console.debug("ping!")
+            cantools.messages.rx_pdo1.send_frame()
+            cantools.messages.tx_pdo1.send_frame()
+            cantools.messages.tx_pdo2.send_frame()
+            cantools.messages.tx_pdo3.send_frame()
+            cantools.messages.tx_pdo4.send_frame()
+            cantools.messages.tx_pdo1_vn1.send_frame()
+            cantools.messages.rx_pdo1_pc.send_frame()
+            cantools.messages.tx_pdo1_pc.send_frame()
+            cantools.messages.tx_sdo1.send_frame()
+            cantools.messages.rx_sdo1.send_frame()
+            cantools.messages.dc_dc2.send_frame()
+            cantools.messages.dc_dc3.send_frame()
+            cantools.messages.dc_dc4.send_frame()
+            cantools.messages.dc_dc_ctrl1.send_frame()
+            cantools.messages.dc_dc_ctrl2.send_frame()
+            cantools.messages.dc_dc_ctrl3.send_frame()
+            cantools.messages.dc_dc_sta1.send_frame()
+            cantools.messages.dc_dc_sta2.send_frame()
+            cantools.messages.dc_dc_sta3.send_frame()
+            cantools.messages.dc_dc_sta5.send_frame()
+            cantools.messages.dc_dc_sta6.send_frame()
+            cantools.messages.dc_dc_sta1b.send_frame()
+            cantools.messages.dc_dc_sta2b.send_frame()
+            cantools.messages.dc_dc_sta3b.send_frame()
+            cantools.messages.dc_dc_sta5b.send_frame()
+            cantools.messages.dc_dc_sta6b.send_frame()
+            cantools.messages.tx_sdo2.send_frame()
+            cantools.messages.tx_sdo3.send_frame()
+            cantools.messages.rx_sdo2.send_frame()
+            cantools.messages.rx_sdo3.send_frame()
+        }
+    }
+
     SwipeView {
         id: swipeView
         anchors.fill: parent
