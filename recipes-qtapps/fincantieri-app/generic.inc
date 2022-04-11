@@ -6,7 +6,7 @@ LICENSE = "CLOSED"
 DEPENDS += "qtquick1 qtbase qtdeclarative qtserialbus "
 
 SRC_URI = " \
-	file://fincantieri-app-1.1 \	
+	file://fincantieri-app-${FCMODEL}-${VERSION} \	
 "
 
 BB_NUMBER_THREADS = "1"
