@@ -1,0 +1,384 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS0 EMD HMI ExternalTool VMS Supervisor
+
+
+BO_ 320 IsoTpRequest: 8 ExternalTool
+ SG_ data0 : 0|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data1 : 8|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data2 : 16|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data3 : 24|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data4 : 32|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data5 : 40|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data6 : 48|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data7 : 56|8@1+ (1,0) [0|0] ""  VMS
+
+BO_ 321 IsoTpResponseVMS: 8 VMS
+ SG_ data_01 : 0|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_02 : 8|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_03 : 16|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_04 : 24|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_05 : 32|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_06 : 40|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_07 : 48|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_08 : 56|8@1+ (1,0) [0|0] ""  ExternalTool
+
+BO_ 97 DcDcCtrl1: 8 VMS
+ SG_ DcDcCtrl1_MainSp : 0|16@1- (0.1,0) [0|0] "kW"  Supervisor
+ SG_ DcDcCtrl1_MainMode : 16|8@1+ (1,0) [1|5] ""  Supervisor
+ SG_ DcDcCtrl1_En : 24|1@1+ (1,0) [0|0] ""  Supervisor
+ SG_ DcDcCtrl1_Rele_Out : 25|1@1+ (1,0) [0|0] ""  Supervisor
+ SG_ DcDcCtrl1_FaultAck : 27|1@1+ (1,0) [0|0] ""  Supervisor
+ SG_ DcDcCtrl1_Rele_In : 28|1@1+ (1,0) [0|0] ""  Supervisor
+ SG_ DcDcCtrl1_ON : 29|1@1+ (1,0) [0|0] ""  Supervisor
+ SG_ DcdcCtrl1_span1 : 30|2@1+ (1,0) [0|0] ""  Supervisor
+ SG_ DcdcCtrl1_DeadbandAmpl : 32|16@1+ (0.1,0) [0|0] "V"  Supervisor
+ SG_ DcdcCtrl1_Vref : 48|16@1+ (0.1,0) [0|0] "V"  Supervisor
+ SG_ DcdcCtrl1_Batt_Err : 26|1@1+ (1,0) [0|0] ""  Supervisor
+
+BO_ 98 DcDcCtrl2: 8 VMS
+ SG_ DcDcCtrl2_I_Disch_Max : 0|16@1- (0.1,0) [0|0] "A"  Supervisor
+ SG_ DcDcCtrl2_I_Charge_Max : 16|16@1- (0.1,0) [0|0] "A"  Supervisor
+ SG_ DcDcCtrl2_U_Batt_Max : 32|16@1- (0.1,0) [0|0] "V"  Supervisor
+ SG_ DcDcCtrl2_U_Batt_Min : 48|16@1- (0.1,0) [0|0] "V"  Supervisor
+
+BO_ 99 DcDcCtrl3: 8 VMS
+ SG_ DcDcCtrl3_IHSMax : 0|16@1- (0.1,0) [0|0] "A"  Supervisor
+ SG_ DcDcCtrl3_BattChargeCurrentSP : 16|16@1- (0.1,0) [0|0] "A"  Supervisor
+ SG_ DcDcCtrl3_UHSMax : 32|16@1- (0.1,0) [0|0] "V"  Supervisor
+ SG_ DcDcCtrl3_BattChargeVoltageSP : 48|16@1- (0.1,0) [0|0] "V"  Supervisor
+
+BO_ 289 DcDcSta1: 8 Supervisor
+ SG_ DcDcSta1_UHSLimMin : 0|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_UHSLimMax : 1|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_IHSLimMin : 2|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_IHSLimMax : 3|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_ULSLimMin : 4|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_ULSLimMax : 5|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_ILSLimMin : 6|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_ILSLimMax : 7|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Err : 8|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Warn : 9|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Rdy : 10|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Run : 11|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_spare1 : 12|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_spare2 : 13|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_FanAct : 14|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_spare3 : 15|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_tPowUnit : 16|16@1- (0.1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta1_CurAvlbl : 32|16@1+ (0.1,0) [0|250] "A"  VMS
+ SG_ DcDcSta1_Rele_1_Fbk : 48|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Rele_2_Fbk : 49|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Rele_3_Fbk : 50|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_LS_PreCharge_Fbk : 51|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_HS_PreCharge_Fbk : 52|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_spare4 : 53|3@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_RolCnt : 56|8@1+ (1,0) [0|0] ""  VMS
+
+BO_ 290 DcDcSta2: 8 Supervisor
+ SG_ DcDcSta2_ILSAct : 0|16@1- (0.1,0) [0|0] "A"  VMS,HMI
+ SG_ DcDcSta2_IHSAct : 16|16@1- (0.1,0) [0|0] "A"  VMS,HMI
+ SG_ DcDcSta2_ULSAct : 32|16@1- (0.1,0) [0|0] "V"  VMS,HMI
+ SG_ DcDcSta2_UHSAct : 48|16@1- (0.1,0) [0|0] "V"  VMS,HMI
+
+BO_ 291 DcDcSta3: 8 Supervisor
+ SG_ DcDcSta3_span1 : 0|6@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err6 : 6|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err7 : 7|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err8 : 8|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err9 : 9|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err10 : 10|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err11 : 11|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err12 : 12|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err13 : 13|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err14 : 14|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err15 : 15|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err16 : 16|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err17 : 17|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err18 : 18|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err19 : 19|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err20 : 20|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err21 : 21|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err22 : 22|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err23 : 23|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err24 : 24|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err25 : 25|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err26 : 26|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err27 : 27|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err28 : 28|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err29 : 29|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err30 : 30|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Err31 : 31|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Warn0 : 32|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Warn1 : 33|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Warn2 : 34|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Warn3 : 35|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Warn4 : 36|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Warn5 : 37|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Warn6 : 38|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Warn7 : 39|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Warn8 : 40|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_span2 : 41|7@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Warn16 : 48|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_Warn17 : 49|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_span3 : 50|6@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_span4 : 56|8@1+ (1,0) [0|0] ""  VMS
+
+BO_ 293 DcDcSta5: 8 Supervisor
+ SG_ DcDcSta5_TrafoTemp1 : 0|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta5_TrafoTemp2 : 8|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta5_TrafoTemp3 : 16|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta5_TrafoTemp4 : 24|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta5_ULS_Est_Act : 32|16@1+ (0.1,0) [0|0] "V"  VMS
+ SG_ DcDcSta5_UHS_Est_Act : 48|16@1+ (0.1,0) [0|0] "V"  VMS
+
+BO_ 294 DcDcSta6: 8 Supervisor
+ SG_ DcDcSta6_PCBTemp1 : 32|8@1+ (1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta6_PCBTemp2 : 40|8@1+ (1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta6_PCBTemp3 : 48|8@1+ (1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta6_PCBTemp4 : 56|8@1+ (1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta6_IndTemp1 : 0|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta6_IndTemp2 : 8|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta6_IndTemp3 : 16|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta6_IndTemp4 : 24|8@1+ (1,0) [40|140] "Celsius"  VMS
+
+BO_ 128 DcDc1: 8 VMS
+ SG_ DcDc1_Running : 0|1@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc1_Failure : 1|1@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc1_BatteryStatus : 2|6@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc1_Status : 8|8@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc1_Status_Word1 : 16|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc1_PowerAct : 32|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc1_PowerSP : 48|16@1- (1,0) [0|0] "W"  HMI
+
+BO_ 129 DcDc2: 8 VMS
+ SG_ DcDc2_PwrUnitTemp : 0|16@1+ (0.1,0) [0|0] "°C"  HMI
+ SG_ DcDc2_MaxAvlbPosCurrent : 16|16@1+ (0.1,0) [0|0] "A"  HMI
+ SG_ DcDc2_MaxAvlbNegCurrent : 32|16@1+ (0.1,0) [0|0] "A"  HMI
+ SG_ DcDc2_MaxAvlbPwr : 48|16@1+ (0.01,0) [0|0] "kW"  HMI
+
+BO_ 130 DcDc3: 8 VMS
+ SG_ DcDc3_Err_Word1 : 0|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc3_Err_Word2 : 16|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc3_DeadBandAmpl : 32|16@1+ (0.1,0) [0|0] "V"  HMI
+ SG_ DcDc3_VoltageRef : 48|16@1+ (0.1,0) [0|0] "V"  HMI
+
+BO_ 131 DcDc4: 8 VMS
+ SG_ DcDc4_Warn_Word1 : 0|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc4_Warn_Word2 : 16|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc4_spare1 : 32|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc4_spare2 : 48|16@1+ (1,0) [0|0] ""  HMI
+
+BO_ 144 MODBUS_Ctrl: 8 HMI
+ SG_ DCDC_RESET : 0|1@1+ (1,0) [0|0] ""  VMS
+ SG_ MODBUS_Ctrl_spare1 : 1|7@1+ (1,0) [0|0] ""  VMS
+ SG_ PowerLimitation : 16|16@1+ (0.01,0) [0|0] "kW"  VMS
+ SG_ MODBUS_Ctrl_spare2 : 8|8@1+ (1,0) [0|0] ""  VMS
+ SG_ MODBUS_Ctrl_spare3 : 32|16@1+ (1,0) [0|0] ""  VMS
+ SG_ MODBUS_Ctrl_spare4 : 48|16@1+ (1,0) [0|0] ""  VMS
+
+
+
+CM_ BU_ BMS0 "Master Battery Management System";
+CM_ BU_ EMD "Engine Management System";
+CM_ BU_ HMI "Engicam";
+CM_ BU_ ExternalTool "External Diagnostic Tool";
+CM_ BU_ VMS "Vehicle Management System";
+CM_ BU_ Supervisor "battery supervisor board";
+CM_ BO_ 320 "KWP2000 request";
+CM_ BO_ 321 "KWP2000 response";
+CM_ SG_ 97 DcDcCtrl1_MainSp "Main controller set value if mode == 5 then in 0.1kW units";
+CM_ SG_ 97 DcDcCtrl1_MainMode "Main controller mode: 1=ULS, 2=UHS, 3=IHS, 4=ILS, 5 = PHS";
+CM_ SG_ 97 DcDcCtrl1_En "Device Enable";
+CM_ SG_ 97 DcDcCtrl1_Rele_Out "0….Out relays disable / 1….Realys Enable";
+CM_ SG_ 97 DcDcCtrl1_FaultAck "fault acknowledge (rising edge)";
+CM_ SG_ 97 DcDcCtrl1_Rele_In "0….Rele 1a/b Disable / 1….Rele 1a/b Enable";
+CM_ SG_ 97 DcDcCtrl1_ON "0….DCDC aux Disable / 1….DCD aux Enable";
+CM_ SG_ 97 DcdcCtrl1_DeadbandAmpl "Deadband amplitude, max 50V";
+CM_ SG_ 97 DcdcCtrl1_Vref "Voltage reference setpoint";
+CM_ SG_ 97 DcdcCtrl1_Batt_Err "if true signals a battery problem and thus forces a shutdown";
+CM_ SG_ 98 DcDcCtrl2_I_Disch_Max "Max battery discharge current";
+CM_ SG_ 98 DcDcCtrl2_I_Charge_Max "Max battery charge current";
+CM_ SG_ 98 DcDcCtrl2_U_Batt_Max "Max Battery voltage";
+CM_ SG_ 98 DcDcCtrl2_U_Batt_Min "Min Battery voltage";
+CM_ SG_ 99 DcDcCtrl3_IHSMax "Max IHS limiter value";
+CM_ SG_ 99 DcDcCtrl3_BattChargeCurrentSP "battery charge current setpoint communicated from BMS";
+CM_ SG_ 99 DcDcCtrl3_UHSMax "Max UHS limiter value";
+CM_ SG_ 99 DcDcCtrl3_BattChargeVoltageSP "battery charge voltage setpoint communicated from BMS";
+CM_ SG_ 289 DcDcSta1_UHSLimMin "
+Min high side voltage limiter active
+";
+CM_ SG_ 289 DcDcSta1_UHSLimMax "Max high side voltage limiter active";
+CM_ SG_ 289 DcDcSta1_IHSLimMin "Min high side current limiter active";
+CM_ SG_ 289 DcDcSta1_IHSLimMax "Max high side current limiter active";
+CM_ SG_ 289 DcDcSta1_ULSLimMin "Min low side voltage limiter active";
+CM_ SG_ 289 DcDcSta1_ULSLimMax "Max low side voltage limiter active";
+CM_ SG_ 289 DcDcSta1_ILSLimMin "Min low side current limiter active";
+CM_ SG_ 289 DcDcSta1_ILSLimMax "Max low side current limiter active";
+CM_ SG_ 289 DcDcSta1_Err "Device is in error state";
+CM_ SG_ 289 DcDcSta1_Warn "DCDC 12V is active";
+CM_ SG_ 289 DcDcSta1_Rdy "Device is ready to operate";
+CM_ SG_ 289 DcDcSta1_Run "Device is running ";
+CM_ SG_ 289 DcDcSta1_spare1 "spare signal";
+CM_ SG_ 289 DcDcSta1_spare2 "spare signal";
+CM_ SG_ 289 DcDcSta1_FanAct "Fans 1 Active/ 0 Not Active";
+CM_ SG_ 289 DcDcSta1_spare3 "spare signal";
+CM_ SG_ 289 DcDcSta1_tPowUnit "Actual Max Temperature of Power Unit's Pcb";
+CM_ SG_ 289 DcDcSta1_CurAvlbl "Max Available Current at LS";
+CM_ SG_ 289 DcDcSta1_Rele_1_Fbk "Rele_1a/b: 1 Active/ 0 Not Active";
+CM_ SG_ 289 DcDcSta1_Rele_2_Fbk "Rele_2: 1 Active/ 0 Not Active";
+CM_ SG_ 289 DcDcSta1_Rele_3_Fbk "Rele_3: 1 Active/ 0 Not Active";
+CM_ SG_ 289 DcDcSta1_LS_PreCharge_Fbk "Input (LS) precharge relay status: 1 Active / 0 Not Active";
+CM_ SG_ 289 DcDcSta1_HS_PreCharge_Fbk "Output (HS) precharge relay status: 1 Active / 0 Not Active";
+CM_ SG_ 289 DcDcSta1_spare4 "spare";
+CM_ SG_ 289 DcDcSta1_RolCnt "Rolling Counter for Timeout (heartbeat signal)";
+CM_ SG_ 290 DcDcSta2_ILSAct "Low side current value";
+CM_ SG_ 290 DcDcSta2_IHSAct "High side current value";
+CM_ SG_ 290 DcDcSta2_ULSAct "Low side voltage value";
+CM_ SG_ 290 DcDcSta2_UHSAct "High side voltage value";
+CM_ SG_ 291 DcDcSta3_Err6 "DCDCx HVHS Short Circuit";
+CM_ SG_ 291 DcDcSta3_Err7 "DCDCx HVHS Overvoltage";
+CM_ SG_ 291 DcDcSta3_Err8 "DCDCx HVLS Overcurrent";
+CM_ SG_ 291 DcDcSta3_Err9 "DCDCx HVLS Overvoltage";
+CM_ SG_ 291 DcDcSta3_Err10 "DCDCx HVHS Transformer Overcurrent";
+CM_ SG_ 291 DcDcSta3_Err11 "DCDCx Auxiliary DCDC Supply Failure";
+CM_ SG_ 291 DcDcSta3_Err12 "Can int 2 Communication Failure";
+CM_ SG_ 291 DcDcSta3_Err13 "DCDCx Power Board Overtemperature";
+CM_ SG_ 291 DcDcSta3_Err14 "DCDCx Power Trafo Overtemperature";
+CM_ SG_ 291 DcDcSta3_Err15 "DCDCx Power Inductor Overtemperature";
+CM_ SG_ 291 DcDcSta3_Err16 "DCDC HVHS Overvoltage";
+CM_ SG_ 291 DcDcSta3_Err17 "DCDC HVLS Overvoltage";
+CM_ SG_ 291 DcDcSta3_Err18 "DCDC HVLS Overcurrent Pos";
+CM_ SG_ 291 DcDcSta3_Err19 "DCDC HVLS Overcurrent Neg";
+CM_ SG_ 291 DcDcSta3_Err20 "DCDC HVHS Overcurrent Pos";
+CM_ SG_ 291 DcDcSta3_Err21 "DCDC HVHS Overcurrent Neg";
+CM_ SG_ 291 DcDcSta3_Err22 "spare signal";
+CM_ SG_ 291 DcDcSta3_Err23 "spare signal";
+CM_ SG_ 291 DcDcSta3_Err24 "Connector Interlock or/and Emergency";
+CM_ SG_ 291 DcDcSta3_Err25 "Supervisor Auxiliary Power Supply Failure";
+CM_ SG_ 291 DcDcSta3_Err26 "DCDCx Does Not Communicate";
+CM_ SG_ 291 DcDcSta3_Err27 "spare signal";
+CM_ SG_ 291 DcDcSta3_Err28 "Internal 15VDC failure";
+CM_ SG_ 291 DcDcSta3_Err29 "Internal Fans Failure";
+CM_ SG_ 291 DcDcSta3_Err30 "Supervisor PCB Overtemperature";
+CM_ SG_ 291 DcDcSta3_Err31 "";
+CM_ SG_ 291 DcDcSta3_Warn0 "DCDC disabled warning";
+CM_ SG_ 291 DcDcSta3_Warn1 "";
+CM_ SG_ 291 DcDcSta3_Warn2 "";
+CM_ SG_ 291 DcDcSta3_Warn3 "";
+CM_ SG_ 291 DcDcSta3_Warn4 "AUX pwr supply disabled warning";
+CM_ SG_ 291 DcDcSta3_Warn5 "";
+CM_ SG_ 291 DcDcSta3_Warn6 "";
+CM_ SG_ 291 DcDcSta3_Warn7 "Relay disabled warning";
+CM_ SG_ 291 DcDcSta3_Warn8 "Fans disabled warning";
+CM_ SG_ 291 DcDcSta3_Warn16 "Connectors Interlock or Emergency status";
+CM_ SG_ 291 DcDcSta3_Warn17 "DCDC LS current de-rating is active";
+CM_ SG_ 293 DcDcSta5_TrafoTemp1 "DC/DC1 Trafo Temperature";
+CM_ SG_ 293 DcDcSta5_TrafoTemp2 "DC/DC2 Trafo Temperature";
+CM_ SG_ 293 DcDcSta5_TrafoTemp3 "DC/DC3 Trafo Temperature";
+CM_ SG_ 293 DcDcSta5_TrafoTemp4 "DC/DC4 Trafo Temperature";
+CM_ SG_ 293 DcDcSta5_ULS_Est_Act "Internat (relay side) battery voltage";
+CM_ SG_ 293 DcDcSta5_UHS_Est_Act "Internat (realy side) DC Bus voltage";
+CM_ SG_ 294 DcDcSta6_PCBTemp1 "DC/DC1 Pcb Temperature";
+CM_ SG_ 294 DcDcSta6_PCBTemp2 "DC/DC2 Pcb Temperature";
+CM_ SG_ 294 DcDcSta6_PCBTemp3 "DC/DC3 Pcb Temperature";
+CM_ SG_ 294 DcDcSta6_PCBTemp4 "DC/DC4 Pcb Temperature";
+CM_ SG_ 294 DcDcSta6_IndTemp1 "DC/DC1 Inductor Temperature";
+CM_ SG_ 294 DcDcSta6_IndTemp2 "DC/DC2 Inductor Temperature";
+CM_ SG_ 294 DcDcSta6_IndTemp3 "DC/DC3 Inductor Temperature";
+CM_ SG_ 294 DcDcSta6_IndTemp4 "DC/DC4 Inductor Temperature";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Event","CyclicIfActive","SpontanWithDelay","CyclicAndSpontan","CyclicAndSpontanWithDelay";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 0;
+BA_DEF_ BO_  "Period [ms]" INT 0 0;
+BA_DEF_ BO_  "Callback" INT 0 0;
+BA_DEF_ BO_  "Simulink" INT 0 0;
+BA_DEF_ BO_  "Additional Sender" STRING ;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "Period [ms]" 100;
+BA_DEF_DEF_  "Callback" 0;
+BA_DEF_DEF_  "Simulink" 0;
+BA_DEF_DEF_  "Additional Sender" "";
+BA_ "DBName" "Cluster";
+BA_ "Period [ms]" BO_ 320 0;
+BA_ "Callback" BO_ 320 1;
+BA_ "Period [ms]" BO_ 321 0;
+BA_ "Callback" BO_ 321 0;
+BA_ "Period [ms]" BO_ 97 10;
+BA_ "Callback" BO_ 97 0;
+BA_ "Callback" BO_ 98 0;
+BA_ "Period [ms]" BO_ 98 100;
+BA_ "Period [ms]" BO_ 99 100;
+BA_ "Callback" BO_ 99 0;
+BA_ "Period [ms]" BO_ 289 100;
+BA_ "Callback" BO_ 289 0;
+BA_ "Period [ms]" BO_ 290 10;
+BA_ "Callback" BO_ 290 0;
+BA_ "Period [ms]" BO_ 291 200;
+BA_ "Callback" BO_ 291 0;
+BA_ "Period [ms]" BO_ 293 100;
+BA_ "Callback" BO_ 293 0;
+BA_ "Period [ms]" BO_ 294 100;
+BA_ "Callback" BO_ 294 0;
+BA_ "Period [ms]" BO_ 128 100;
+BA_ "Period [ms]" BO_ 129 100;
+BA_ "Period [ms]" BO_ 130 100;
+BA_ "Period [ms]" BO_ 131 500;
+BA_ "Period [ms]" BO_ 144 0;
+BA_ "Callback" BO_ 144 0;
+

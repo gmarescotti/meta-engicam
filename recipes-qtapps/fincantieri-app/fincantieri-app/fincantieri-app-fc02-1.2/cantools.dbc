@@ -1,0 +1,522 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: HMI ExternalTool VMS supervisor_A supervisor_B
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ TxSDO1_spare2 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TxSDO1_spare1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCDCB_Overtemperature2 : 33|1@0+ (1,0) [0|0] ""  HMI
+ SG_ B_Internal_Comms_Failure2 : 34|1@0+ (1,0) [0|0] ""  HMI
+ SG_ B_Internal_Aux_Power_Supply_Failure2 : 35|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCB_HVLS_Overcurrent2 : 36|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCB_HVHS_Overcurrent2 : 37|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCB_HVLS_Overvoltage2 : 38|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCB_HVHS_Overvoltage2 : 39|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_Overtemperature2 : 17|1@0+ (1,0) [0|0] ""  HMI
+ SG_ A_Internal_Comms_Failure2 : 18|1@0+ (1,0) [0|0] ""  HMI
+ SG_ A_Internal_Aux_Power_Supply_Failure2 : 19|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_HVLS_Overcurrent2 : 20|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_HVHS_Overcurrent2 : 21|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_HVLS_Overvoltage2 : 22|1@0+ (1,0) [0|0] ""  HMI
+ SG_ DCDCA_HVHS_Overvoltage2 : 23|1@0+ (1,0) [0|0] ""  HMI
+ SG_ External_Analog_Inputs_Lost2 : 5|1@0+ (1,0) [0|0] ""  HMI
+ SG_ External_Canbus_Communication_Failure2 : 6|1@0+ (1,0) [0|0] ""  HMI
+ SG_ Connector_Interlock_Emergency2 : 7|1@0+ (1,0) [0|0] ""  HMI
+ SG_ FC_Enable_command_FBK_CI15_FBK2 : 24|1@0+ (1,0) [0|0] ""  HMI
+ SG_ FC_Emergency_shutdown_FBK_ESD_FBK2 : 25|1@0+ (1,0) [0|0] ""  HMI
+ SG_ TEMP_DERATING_ACTIVE2 : 26|1@0+ (1,0) [0|0] ""  HMI
+ SG_ POWER_DERATING_LIMIT_ACTIVE2 : 27|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DO_32 : 28|1@0+ (1,0) [0|0] ""  HMI
+ SG_ ESD_FC_REQUEST2 : 29|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DO_12 : 30|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DO_02 : 31|1@0+ (1,0) [0|0] ""  HMI
+ SG_ CONVERTER_RUN2 : 16|1@0+ (1,0) [0|0] ""  HMI
+ SG_ CONVERTER_READY2 : 17|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DI_3_FBK2 : 18|1@0+ (1,0) [0|0] ""  HMI
+ SG_ FC_DISCONNECT_FBK2 : 19|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DI_1_FBK2 : 20|1@0+ (1,0) [0|0] ""  HMI
+ SG_ SPARE_DI_0_FBK2 : 21|1@0+ (1,0) [0|0] ""  HMI
+ SG_ ON_OFF_CMD_FBK2 : 22|1@0+ (1,0) [0|0] ""  HMI
+ SG_ EMERGENCY_STOP_REQUEST_FBK2 : 23|1@0+ (1,0) [0|0] ""  HMI
+ SG_ TcmHsPriOut_b : 16|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ TcmHsSecInSp_b : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1968 IsoTpRequest: 8 ExternalTool
+ SG_ data0 : 0|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data1 : 8|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data2 : 16|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data3 : 24|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data4 : 32|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data5 : 40|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data6 : 48|8@1+ (1,0) [0|0] ""  VMS
+ SG_ data7 : 56|8@1+ (1,0) [0|0] ""  VMS
+
+BO_ 1989 IsoTpResponseVMS: 8 VMS
+ SG_ data_01 : 0|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_02 : 8|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_03 : 16|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_04 : 24|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_05 : 32|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_06 : 40|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_07 : 48|8@1+ (1,0) [0|0] ""  ExternalTool
+ SG_ data_08 : 56|8@1+ (1,0) [0|0] ""  ExternalTool
+
+BO_ 528 RxPDO1: 8 HMI
+ SG_ RxPDO1_PowerCurrentMax : 0|16@1+ (0.01,0) [0|71] "kW"  VMS
+ SG_ RxPDO1_SystemOffRequest : 16|1@1+ (1,0) [0|1] ""  VMS
+ SG_ RxPDO1_FastShutdownRequest : 17|1@1+ (1,0) [0|1] ""  VMS
+ SG_ RxPDO1_FreezeProtectioRequest : 18|1@1+ (1,0) [0|1] ""  VMS
+ SG_ RxPDO1_spare1 : 20|4@1+ (1,0) [0|0] ""  VMS
+ SG_ RxPDO1_MaintenanceCmd : 24|8@1+ (1,0) [0|0] ""  VMS
+ SG_ RxPDO1_spare2 : 32|16@1+ (1,0) [0|0] ""  VMS
+ SG_ RxPDO1_spare3 : 48|16@1+ (1,0) [0|0] ""  VMS
+ SG_ DCDC_RESET : 19|1@1+ (1,0) [0|0] ""  VMS
+
+BO_ 400 TxPDO1: 8 VMS
+ SG_ TxPDO1_EstimatedTimeToPower : 0|16@1+ (1,0) [0|0] "s"  HMI
+ SG_ TxPDO1_EstimatedTimeForShutdown : 16|16@1+ (1,0) [0|0] "s"  HMI
+ SG_ TxPDO1_SystemState : 32|8@1+ (1,0) [0|0] ""  HMI
+ SG_ TxPDO1_SystemSubState : 40|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TxPDO1_StatusFreezeProtection : 44|1@1+ (1,0) [0|0] ""  HMI
+ SG_ TxPDO1_spare1 : 45|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TxPDO1_spare2 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 656 TxPDO2: 8 VMS
+ SG_ TxPDO2_EventCode_a : 0|16@1+ (1,0) [0|0] ""  HMI
+ SG_ TxPDO2_EventCode_b : 16|16@1+ (1,0) [0|0] ""  HMI
+ SG_ TxPDO2_ExtendedInfo_a : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TxPDO2_ExtendedInfo_b : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 912 TxPDO3: 8 VMS
+ SG_ TxPDO3_PowerCurrentAct : 0|16@1+ (10,0) [0|0] "W"  HMI
+ SG_ TxPDO3_PowerCurrentPeripheral : 16|16@1+ (10,0) [0|0] "W"  HMI
+ SG_ TxPDO3_PowerCurrentOpt : 32|16@1+ (10,0) [0|0] "W"  HMI
+ SG_ TxPDO3_spare1 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1168 TxPDO4: 8 VMS
+ SG_ TxPDO4_PowerCurrentMax : 0|16@1+ (10,0) [0|0] "W"  HMI
+ SG_ TxPDO4_PowerCurrentMaxState : 16|16@1+ (1,0) [0|0] ""  HMI
+ SG_ TxPDO4_PowerCurrentMin : 32|16@1+ (10,0) [0|0] "W"  HMI
+ SG_ TxPDO4_PowerCurrentMinState : 48|16@1+ (1,0) [0|0] ""  HMI
+
+BO_ 402 TxPDO1_VN1: 8 VMS
+ SG_ PosMixValve : 0|8@1+ (1,0) [0|100] "%"  HMI
+ SG_ TcmHsPriOut : 8|16@1- (0.1,0) [0|0] "Celsius"  HMI
+ SG_ TcmHsSecInSp : 24|16@1- (0.1,0) [0|0] "Celsius"  HMI
+ SG_ MuteH2SensExhaust : 40|1@1+ (1,0) [0|1] ""  HMI
+ SG_ TxPDO1_VN1_spare1 : 41|7@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TxPDO1_VN1_spare2 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 529 RxPDO1_PC: 8 VMS
+ SG_ DcxcCurrentFcSide : 0|16@1+ (0.1,0) [0|546] "A"  HMI
+ SG_ DcxcVoltageFcSide : 16|16@1+ (0.1,0) [0|331] "V"  HMI
+ SG_ DcxcCurrentLinkSide : 32|16@1+ (0.01,0) [0|120] "A"  HMI
+ SG_ DcxcVoltageLinkSide : 48|16@1+ (0.1,0) [0|802] "V"  HMI
+
+BO_ 401 TxPDO1_PC: 8 VMS
+ SG_ DcxcCurrentSp : 0|16@1+ (0.1,0) [0|500] "A"  HMI
+ SG_ DcxcConnectionState : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TxPDO1_PC_spare1 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TxPDO1_PC_spare2 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TxPDO1_PC_spare3 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1424 TxSDO1: 1 HMI
+ SG_ TxSDO_PowerCurrentMode : 0|8@1+ (1,0) [0|1] ""  VMS
+
+BO_ 128 DcDc1: 8 VMS
+ SG_ Dc_Dc1_Running : 0|1@1+ (1,0) [0|0] ""  HMI
+ SG_ Dc_Dc1_Failure : 1|1@1+ (1,0) [0|0] ""  HMI
+ SG_ Dc_Dc1_spare1 : 2|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Dc_Dc1_Status : 8|8@1+ (1,0) [0|0] ""  HMI
+ SG_ Dc_Dc1_PowerAct : 32|16@1+ (1,0) [0|0] ""  HMI
+ SG_ Dc_Dc1_spare3 : 48|16@1+ (10,0) [0|0] "W" Vector__XXX
+ SG_ Dc_Dc1_StatusWord1 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1552 RxSDO1: 1 VMS
+ SG_ RxSDO_PowerCurrentMode : 0|8@1+ (1,0) [0|0] ""  HMI
+
+BO_ 129 DcDc2: 8 VMS
+ SG_ DcDc2_PwrUnitTemp : 0|16@1+ (0.1,0) [0|0] "�C"  HMI
+ SG_ DcDc2_MaxAvlbCurrent : 16|16@1+ (0.1,0) [0|0] "A"  HMI
+ SG_ DcDc2_spare1 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DcDc2_MaxAvlbPwr : 48|16@1+ (0.01,0) [0|0] "kW"  HMI
+
+BO_ 130 DcDc3: 8 VMS
+ SG_ DcDc3_Err_Word1 : 0|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc3_Err_Word2 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DcDc3_Err_Word3 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DcDc3_Err_Word4 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 131 DcDc4: 8 VMS
+ SG_ DcDc4_Warn_Word1 : 0|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc4_Warn_Word2 : 16|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc4_Warn_Word3 : 32|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc4_Warn_Word4 : 48|16@1+ (1,0) [0|0] ""  HMI
+
+BO_ 97 DcDcCtrl1: 8 VMS
+ SG_ DcDcCtrl1_MainSp : 0|16@1- (0.1,0) [0|0] "V or A"  supervisor_A,supervisor_B
+ SG_ DcDcCtrl1_MainMode : 16|8@1+ (1,0) [1|4] ""  supervisor_A,supervisor_B
+ SG_ DcDcCtrl1_En : 24|1@1+ (1,0) [0|0] ""  supervisor_A,supervisor_B
+ SG_ DcDcCtrl1_Rele_Out : 25|1@1+ (1,0) [0|0] ""  supervisor_A,supervisor_B
+ SG_ DcDcCtrl1_FaultAck : 32|1@1+ (1,0) [0|0] ""  supervisor_A,supervisor_B
+ SG_ DcDcCtrl1_Rele_In : 33|1@1+ (1,0) [0|0] ""  supervisor_A,supervisor_B
+ SG_ DcDcCtrl1_ON : 34|1@1+ (1,0) [0|0] ""  supervisor_A,supervisor_B
+ SG_ DcdcCtrl1_span1 : 26|6@1+ (1,0) [0|0] ""  supervisor_A,supervisor_B
+ SG_ DcdcCtrl1_span2 : 35|5@1+ (1,0) [0|0] ""  supervisor_A,supervisor_B
+ SG_ DcdcCtrl1_span3 : 40|8@1+ (1,0) [0|0] ""  supervisor_A,supervisor_B
+ SG_ DcdcCtrl1_span4 : 48|16@1+ (1,0) [0|0] ""  supervisor_A,supervisor_B
+
+BO_ 98 DcDcCtrl2: 8 VMS
+ SG_ DcDcCtrl2_ILSMax : 0|16@1- (0.1,0) [0|0] "A"  supervisor_A,supervisor_B
+ SG_ DcDcCtrl2_ILSMin : 16|16@1- (0.1,0) [0|0] "A"  supervisor_A,supervisor_B
+ SG_ DcDcCtrl2_ULSMax : 32|16@1- (0.1,0) [0|0] "V"  supervisor_A,supervisor_B
+ SG_ DcDcCtrl2_ULSMin : 48|16@1- (0.1,0) [0|0] "V"  supervisor_A,supervisor_B
+
+BO_ 99 DcDcCtrl3: 8 VMS
+ SG_ DcDcCtrl3_IHSMax : 0|16@1- (0.1,0) [0|0] "A"  supervisor_A,supervisor_B
+ SG_ DcDcCtrl3_IHSMin : 16|16@1- (0.1,0) [0|0] "A"  supervisor_A,supervisor_B
+ SG_ DcDcCtrl3_UHSMax : 32|16@1- (0.1,0) [0|0] "V"  supervisor_A,supervisor_B
+ SG_ DcDcCtrl3_UHSMin : 48|16@1- (0.1,0) [0|0] "V"  supervisor_A,supervisor_B
+
+BO_ 289 DcDcSta1: 8 supervisor_A
+ SG_ DcDcSta1_UHSLimMin : 0|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_UHSLimMax : 1|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_IHSLimMin : 2|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_IHSLimMax : 3|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_ULSLimMin : 4|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_ULSLimMax : 5|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_ILSLimMin : 6|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_ILSLimMax : 7|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Err : 8|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Warn : 9|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Rdy : 10|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Run : 11|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_spare1 : 12|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_spare2 : 13|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_FanAct : 14|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_spare3 : 15|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_tPowUnit : 16|16@1- (0.1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta1_CurAvlbl : 32|16@1+ (0.1,0) [0|250] "A"  VMS
+ SG_ DcDcSta1_Rele_1_Fbk : 48|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Rele_2_Fbk : 49|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Rele_3_Fbk : 50|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_LS_PreCharge_Fbk : 51|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_HS_PreCharge_Fbk : 52|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_spare4 : 53|3@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_RolCnt : 56|8@1+ (1,0) [0|0] ""  VMS
+
+BO_ 290 DcDcSta2: 8 supervisor_A
+ SG_ DcDcSta2_ILSAct : 0|16@1- (0.1,0) [0|0] "A"  VMS
+ SG_ DcDcSta2_IHSAct : 16|16@1- (0.1,0) [0|0] "A"  VMS
+ SG_ DcDcSta2_ULSAct : 32|16@1- (0.1,0) [0|0] "V"  VMS
+ SG_ DcDcSta2_UHSAct : 48|16@1- (0.1,0) [0|0] "V"  VMS
+
+BO_ 291 DcDcSta3: 8 supervisor_A
+ SG_ DcDcSta3_ErrWrd1 : 0|16@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_ErrWrd2 : 16|16@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_WarnWrd1 : 32|16@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_WarnWrd2 : 48|16@1+ (1,0) [0|0] ""  VMS
+
+BO_ 293 DcDcSta5: 8 supervisor_A
+ SG_ DcDcSta5_TrafoTemp1 : 0|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta5_TrafoTemp2 : 8|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta5_TrafoTemp3 : 16|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta5_TrafoTemp4 : 24|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta5_ULS_Est_Act : 32|16@1- (0.1,0) [0|0] "V"  VMS
+ SG_ DcDcSta5_UHS_Est_Act : 48|16@1- (0.1,0) [0|0] "V"  VMS
+
+BO_ 294 DcDcSta6: 8 supervisor_A
+ SG_ DcDcSta6_PCBTemp1 : 32|8@1+ (1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta6_PCBTemp2 : 40|8@1+ (1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta6_PCBTemp3 : 48|8@1+ (1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta6_PCBTemp4 : 56|8@1+ (1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta6_IndTemp1 : 0|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta6_IndTemp2 : 8|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta6_IndTemp3 : 16|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta6_IndTemp4 : 24|8@1+ (1,0) [40|140] "Celsius"  VMS
+
+BO_ 305 DcDcSta1b: 8 supervisor_B
+ SG_ DcDcSta1_UHSLimMin_b : 0|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_UHSLimMax_b : 1|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_IHSLimMin_b : 2|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_IHSLimMax_b : 3|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_ULSLimMin_b : 4|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_ULSLimMax_b : 5|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_ILSLimMin_b : 6|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_ILSLimMax_b : 7|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Err_b : 8|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Warn_b : 9|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Rdy_b : 10|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Run_b : 11|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_spare1_b : 12|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_spare2_b : 13|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_FanAct_b : 14|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_spare3_b : 15|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_tPowUnit_b : 16|16@1- (0.1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta1_CurAvlbl_b : 32|16@1+ (0.1,0) [0|250] "A"  VMS
+ SG_ DcDcSta1_Rele_1_Fbk_b : 48|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Rele_2_Fbk_b : 49|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_Rele_3_Fbk_b : 50|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_LS_PreCharge_Fbk_b : 51|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_HS_PreCharge_Fbk_b : 52|1@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_spare4_b : 53|3@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta1_RolCnt_b : 56|8@1+ (1,0) [0|0] ""  VMS
+
+BO_ 306 DcDcSta2b: 8 supervisor_B
+ SG_ DcDcSta2_ILSAct_b : 0|16@1- (0.1,0) [0|0] "A"  VMS
+ SG_ DcDcSta2_IHSAct_b : 16|16@1- (0.1,0) [0|0] "A"  VMS
+ SG_ DcDcSta2_ULSAct_b : 32|16@1- (0.1,0) [0|0] "V"  VMS
+ SG_ DcDcSta2_UHSAct_b : 48|16@1- (0.1,0) [0|0] "V"  VMS
+
+BO_ 307 DcDcSta3b: 8 supervisor_B
+ SG_ DcDcSta3_ErrWrd1_b : 0|16@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_ErrWrd2_b : 16|16@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_WarnWrd1_b : 32|16@1+ (1,0) [0|0] ""  VMS
+ SG_ DcDcSta3_WarnWrd2_b : 48|16@1+ (1,0) [0|0] ""  VMS
+
+BO_ 309 DcDcSta5b: 8 supervisor_B
+ SG_ DcDcSta5_TrafoTemp1_b : 0|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta5_TrafoTemp2_b : 8|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta5_TrafoTemp3_b : 16|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta5_TrafoTemp4_b : 24|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta5_ULS_Est_Act_b : 32|16@1- (0.1,0) [0|0] "V"  VMS
+ SG_ DcDcSta5_UHS_Est_Act_b : 48|16@1- (0.1,0) [0|0] "V"  VMS
+
+BO_ 310 DcDcSta6b: 8 supervisor_B
+ SG_ DcDcSta6_PCBTemp1_b : 32|8@1+ (1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta6_PCBTemp2_b : 40|8@1+ (1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta6_PCBTemp3_b : 48|8@1+ (1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta6_PCBTemp4_b : 56|8@1+ (1,0) [20|100] "Celsius"  VMS
+ SG_ DcDcSta6_IndTemp1_b : 0|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta6_IndTemp2_b : 8|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta6_IndTemp3_b : 16|8@1+ (1,0) [40|140] "Celsius"  VMS
+ SG_ DcDcSta6_IndTemp4_b : 24|8@1+ (1,0) [40|140] "Celsius"  VMS
+
+BO_ 1425 TxSDO2: 1 HMI
+ SG_ TxSDO_PowerCurrentReference : 0|8@1+ (1,0) [0|1] ""  VMS
+
+BO_ 1426 TxSDO3: 1 HMI
+ SG_ TxSDO_PowerCurrentMinHandling : 0|8@1+ (1,0) [0|0] ""  VMS
+
+BO_ 1553 RxSDO2: 1 VMS
+ SG_ RxSDO_PowerCurrentReference : 0|8@1+ (1,0) [0|0] ""  HMI
+
+BO_ 1554 RxSDO3: 1 VMS
+ SG_ RxSDO_PowerCurrentMinHandling : 0|8@1+ (1,0) [0|0] ""  HMI
+
+
+
+CM_ BU_ HMI "Engicam";
+CM_ BU_ ExternalTool "External Diagnostic Tool";
+CM_ BU_ VMS "FC02 scheda interfaccia";
+CM_ BU_ supervisor_A "Supervisor A";
+CM_ BU_ supervisor_B "Supervisor B";
+CM_ SG_ 3221225472 TcmHsPriOut_b "second part";
+CM_ SG_ 3221225472 TcmHsSecInSp_b "second part
+";
+CM_ BO_ 1968 "KWP2000 request";
+CM_ BO_ 1989 "KWP2000 response";
+CM_ SG_ 528 RxPDO1_PowerCurrentMax "maximum power limit from PMS";
+CM_ SG_ 528 RxPDO1_SystemOffRequest "Complete stop/shutdown of system and peripheral supplies.
+0-System will stay alive
+1-System will shut down and go OFF";
+CM_ SG_ 528 RxPDO1_FastShutdownRequest "0-No request
+1-If in SystemState �Operation� the power/current output will be very fast de-creased to zero. Afterwards the system will shut down.";
+CM_ SG_ 528 RxPDO1_FreezeProtectioRequest "0-No request
+1-When set while system is in SystemState �Operation� and kept active until SystemState changed to �Shutdown� then a special shut-down will be activated to get System into a freeze protected state.";
+CM_ SG_ 528 RxPDO1_MaintenanceCmd "Should be 0 at the moment. Reserved for future";
+CM_ SG_ 528 DCDC_RESET "0 = normal, 1 = perform reset (fault acknowledge) action";
+CM_ SG_ 400 TxPDO1_EstimatedTimeToPower "While SystemState is not �Operation�, this value predicts time in seconds [s] until Sys-temState reaches �Operation�.
+When in SystemState �Operation� this value predicts time needed to reach set point.
+If value is zero (=0) no prediction available or state/set point already reached.";
+CM_ SG_ 400 TxPDO1_EstimatedTimeForShutdown "This value predicts time in seconds [s] needed for system shutdown (Time within SystemStates �Shutdown�, �EmcyShut-down�, �ErrorShutdown�).
+If value is zero (=0) no prediction available or shutdown already completed.";
+CM_ SG_ 400 TxPDO1_SystemState "System state";
+CM_ SG_ 400 TxPDO1_SystemSubState "Additional information what is actually done in actual SystemState. Sometimes specified in customer specific project documentation.";
+CM_ SG_ 400 TxPDO1_StatusFreezeProtection "Status signal if system is actually freeze pro-tected";
+CM_ SG_ 656 TxPDO2_EventCode_a "Event code";
+CM_ SG_ 656 TxPDO2_EventCode_b "Event code
+";
+CM_ SG_ 912 TxPDO3_PowerCurrentAct "Power/current the system is providing at the moment. Resolution/Unit is same as PowerCurrentSp (dependent on SysConfig)";
+CM_ SG_ 912 TxPDO3_PowerCurrentPeripheral "Information about power/current (depending on PowerCurrentMode/ PowerCurrentReference) the system is consuming for operation at the moment.";
+CM_ SG_ 912 TxPDO3_PowerCurrentOpt "Optimal power/current for best efficiency.";
+CM_ SG_ 1168 TxPDO4_PowerCurrentMax "Maximum power/current the system is able to pro-vide at the moment. Resolution/Unit is same as PowerCurrentSp (dependent on SysConfig)";
+CM_ SG_ 1168 TxPDO4_PowerCurrentMaxState "Status information about PowerCurrentMax";
+CM_ SG_ 1168 TxPDO4_PowerCurrentMin "Minimum power/current the system is able to pro-vide at the moment. Resolution/Unit is same as PowerCurrentSp (dependent on SysConfig)";
+CM_ SG_ 1168 TxPDO4_PowerCurrentMinState "Status information about PowerCurrentMin
+(reserved for future use)";
+CM_ SG_ 402 PosMixValve "Position of cooling medium mix valve in percent [%]. 0% is internal cooling loop active (no thermic energy output to customer) and 100% is complete volume flow (thermic energy) transferred to plate heat exchanger.
+A value of 255 means no information available.";
+CM_ SG_ 402 TcmHsPriOut "Temperature cool medium heat sink primary (fuel cell loop) output side (TT34) actual value. Resolu-tion is 0.1�C per digit. Unit is degree Celsius (�C).";
+CM_ SG_ 402 TcmHsSecInSp "Temperature cool medium heat sink secondary (customer loop) output side set point. Resolution is 0.1�C per digit. Unit is degree Celsius (�C).";
+CM_ SG_ 402 MuteH2SensExhaust "0 = Sensor signal used for safety shutdown
+1 = Sensor signal should be muted (no air volume flow -> no mixing purge gas with air -> high concen-trations operationally possible.
+For safety reasons while this signal is active (=1) gas supply can be closed by customer.";
+CM_ SG_ 529 DcxcCurrentFcSide "DCDC Measured current at Fc side in 0.1 A steps. If not supported, set to 0xFFFF.";
+CM_ SG_ 529 DcxcVoltageFcSide "Measured voltage at Fc side in 0.1 V steps. If not supported, set to 0xFFFF.";
+CM_ SG_ 529 DcxcCurrentLinkSide "Measured current at Link side in 0.01 A steps. If not supported, set to 0xFFFF";
+CM_ SG_ 529 DcxcVoltageLinkSide "Measured voltage at Link side in 0.1 V steps. If not supported, set to 0xFFFF";
+CM_ SG_ 401 DcxcCurrentSp "Current set point in steps of 0.1 A This set point needs to become active without any ramps within a delay of not more than 50 ms. The PM system control already generates opti-mized ramps internally.";
+CM_ SG_ 401 DcxcConnectionState "0 � Disconnected; 10 � Precharge (minus connected, small current supplied); 20 � Active (minus and plus contactors closed)";
+CM_ SG_ 1424 TxSDO_PowerCurrentMode "0: Current request
+1: Power request
+2-255: reserved
+Can only be changed in SystemState �Standby�
+Default: 1";
+CM_ SG_ 128 Dc_Dc1_PowerAct "DCDC actual power";
+CM_ SG_ 128 Dc_Dc1_spare3 "pwr setpoint sent to the FC by the DCDC (interpreted Analog in)";
+CM_ SG_ 130 DcDc3_Err_Word1 "";
+CM_ SG_ 131 DcDc4_Warn_Word2 "not used, spare";
+CM_ SG_ 131 DcDc4_Warn_Word3 "not used, spare";
+CM_ SG_ 131 DcDc4_Warn_Word4 "not used, spare";
+CM_ SG_ 1425 TxSDO_PowerCurrentReference "0: DCXC input (Fuel Cell Stack side)
+1: DCXC output (XC-Link side)
+2-255: Reserved
+Can only be changed in SystemState �Standby�
+Default: 0";
+CM_ SG_ 1426 TxSDO_PowerCurrentMinHandling "0: When PowerCurrentSp is below PowerCurrentMin then PowerCur-rentSp is set to PowerCurrentMin in-ternally.
+? System may deliver more power/current than requested by cus-tomer.
+1: When PowerCurrentSp is below PowerCurrentMin, the system will switch to SystemState �ShutDown�.
+Default: 0";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Event","CyclicIfActive","SpontanWithDelay","CyclicAndSpontan","CyclicAndSpontanWithDelay";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 0;
+BA_DEF_ BO_  "Period [ms]" INT 0 0;
+BA_DEF_ BO_  "Callback" INT 0 0;
+BA_DEF_ BO_  "Simulink" INT 0 0;
+BA_DEF_ BO_  "Additional Sender" STRING ;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "Period [ms]" 100;
+BA_DEF_DEF_  "Callback" 0;
+BA_DEF_DEF_  "Simulink" 0;
+BA_DEF_DEF_  "Additional Sender" "";
+BA_ "DBName" "Cluster";
+BA_ "Period [ms]" BO_ 1968 0;
+BA_ "Callback" BO_ 1968 1;
+BA_ "VFrameFormat" BO_ 1968 0;
+BA_ "Period [ms]" BO_ 1989 0;
+BA_ "Callback" BO_ 1989 0;
+BA_ "Callback" BO_ 528 0;
+BA_ "Period [ms]" BO_ 528 1000;
+BA_ "Period [ms]" BO_ 400 500;
+BA_ "Callback" BO_ 400 0;
+BA_ "Period [ms]" BO_ 656 500;
+BA_ "Callback" BO_ 656 0;
+BA_ "Period [ms]" BO_ 912 500;
+BA_ "Callback" BO_ 912 0;
+BA_ "Period [ms]" BO_ 1168 500;
+BA_ "Callback" BO_ 1168 0;
+BA_ "Period [ms]" BO_ 402 1000;
+BA_ "Callback" BO_ 402 0;
+BA_ "VFrameFormat" BO_ 402 0;
+BA_ "Period [ms]" BO_ 529 50;
+BA_ "Callback" BO_ 529 0;
+BA_ "Period [ms]" BO_ 401 50;
+BA_ "Callback" BO_ 401 0;
+BA_ "GenMsgSendType" BO_ 1424 0;
+BA_ "Period [ms]" BO_ 1424 0;
+BA_ "Callback" BO_ 1424 1;
+BA_ "Period [ms]" BO_ 128 100;
+BA_ "Period [ms]" BO_ 1552 0;
+BA_ "Callback" BO_ 1552 1;
+BA_ "Period [ms]" BO_ 129 100;
+BA_ "Callback" BO_ 129 0;
+BA_ "Period [ms]" BO_ 130 100;
+BA_ "Callback" BO_ 130 0;
+BA_ "Period [ms]" BO_ 131 500;
+BA_ "Callback" BO_ 131 0;
+BA_ "Period [ms]" BO_ 97 10;
+BA_ "Callback" BO_ 97 0;
+BA_ "Callback" BO_ 98 0;
+BA_ "Period [ms]" BO_ 98 100;
+BA_ "Period [ms]" BO_ 99 100;
+BA_ "Callback" BO_ 99 0;
+BA_ "Period [ms]" BO_ 289 100;
+BA_ "Callback" BO_ 289 0;
+BA_ "Period [ms]" BO_ 290 10;
+BA_ "Callback" BO_ 290 0;
+BA_ "Period [ms]" BO_ 291 200;
+BA_ "Callback" BO_ 291 0;
+BA_ "Period [ms]" BO_ 293 100;
+BA_ "Callback" BO_ 293 0;
+BA_ "Period [ms]" BO_ 294 100;
+BA_ "Callback" BO_ 294 0;
+BA_ "Callback" BO_ 305 0;
+BA_ "Period [ms]" BO_ 305 100;
+BA_ "Period [ms]" BO_ 306 10;
+BA_ "Callback" BO_ 306 0;
+BA_ "Period [ms]" BO_ 307 200;
+BA_ "Callback" BO_ 307 0;
+BA_ "Period [ms]" BO_ 309 100;
+BA_ "Callback" BO_ 309 0;
+BA_ "Period [ms]" BO_ 310 100;
+BA_ "Callback" BO_ 310 0;
+BA_ "GenMsgSendType" BO_ 1425 0;
+BA_ "Period [ms]" BO_ 1425 0;
+BA_ "Callback" BO_ 1425 1;
+BA_ "Period [ms]" BO_ 1426 0;
+BA_ "Callback" BO_ 1426 1;
+BA_ "Period [ms]" BO_ 1553 0;
+BA_ "Callback" BO_ 1553 1;
+BA_ "Period [ms]" BO_ 1554 0;
+BA_ "Callback" BO_ 1554 1;
+VAL_ 400 TxPDO1_SystemState 0 "Booting/Setup" 10 "Maintenance" 20 "Standby" 30 "StartUp" 40 "Operation" 50 "Shutdown" 52 "ErrorShutdown" 54 "EmcyShutdown" 60 "Stop" 62 "Error" 70 "Ready4Off" ;
+VAL_ 1424 TxSDO_PowerCurrentMode 1 "power" 0 "current" ;
+VAL_ 1425 TxSDO_PowerCurrentReference 0 "DCXC input" 1 "DCXC output" ;
+
