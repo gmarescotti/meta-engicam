@@ -50,18 +50,6 @@ Item {
         interval: 500; running: true; repeat: true
         onTriggered: {
             console.debug("ping!")
-            cantools.messages.dc_dc_ctrl1.send_frame()
-            cantools.messages.dc_dc_ctrl2.send_frame()
-            cantools.messages.dc_dc_ctrl3.send_frame()
-            cantools.messages.dc_dc_sta1.send_frame()
-            cantools.messages.dc_dc_sta2.send_frame()
-            cantools.messages.dc_dc_sta3.send_frame()
-            cantools.messages.dc_dc_sta5.send_frame()
-            cantools.messages.dc_dc_sta6.send_frame()
-            cantools.messages.dc_dc1.send_frame()
-            cantools.messages.dc_dc2.send_frame()
-            cantools.messages.dc_dc3.send_frame()
-            cantools.messages.dc_dc4.send_frame()
             cantools.messages.modbus_ctrl.send_frame()
         }
     }
