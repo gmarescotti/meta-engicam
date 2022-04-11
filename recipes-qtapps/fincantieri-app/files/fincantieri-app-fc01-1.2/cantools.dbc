@@ -202,7 +202,7 @@ BO_ 131 DcDc4: 8 VMS
  SG_ DcDc4_spare1 : 32|16@1+ (1,0) [0|0] ""  HMI
  SG_ DcDc4_spare2 : 48|16@1+ (1,0) [0|0] ""  HMI
 
-BO_ 144 MODBUS_Ctrl: 8 HMI
+BO_ 144 Modbus_Ctrl: 8 HMI
  SG_ DCDC_RESET : 0|1@1+ (1,0) [0|0] ""  VMS
  SG_ MODBUS_Ctrl_spare1 : 1|7@1+ (1,0) [0|0] ""  VMS
  SG_ PowerLimitation : 16|16@1+ (0.01,0) [0|0] "kW"  VMS
