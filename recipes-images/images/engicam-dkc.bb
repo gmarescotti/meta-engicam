@@ -50,7 +50,7 @@ IMAGE_INSTALL_remove  = " \
 #PACKAGES QT
 IMAGE_INSTALL_append_gea = " \
   qtquick1 \
-  fincantieri-app fincantieri-service \
+  fincantieri-app-fc01 fincantieri-service \
 "
 IMAGE_INSTALL_remove ="qt3d nativesdk-qt3d qt3d-native ruby-native"
 
