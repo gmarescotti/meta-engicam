@@ -35,7 +35,7 @@ ApplicationWindow {
         ListElement { mod_name: "dc_bus_voltage"; can_name: "dc_dc_sta2_uhs_act" }
         ListElement { mod_name: "dc_bus_current"; can_name: "dc_dc_sta2_ihs_act" }
 
-        ListElement { mod_name: "battery_status"; can_name: "dc_dc1_battery_status" }
+        ListElement { mod_name: "battery_status"; can_name: "dc_dc4_battery_soc" }
         ListElement { mod_name: "dcdc_status"; can_name: "dc_dc1_status" }
         ListElement { mod_name: "dcdc_error_word_1"; can_name: "dc_dc3_err_word1" }
         ListElement { mod_name: "dcdc_error_word_2"; can_name: "dc_dc3_err_word2" }

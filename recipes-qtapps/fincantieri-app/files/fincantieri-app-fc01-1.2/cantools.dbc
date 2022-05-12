@@ -199,8 +199,9 @@ BO_ 130 DcDc3: 8 VMS
 BO_ 131 DcDc4: 8 VMS
  SG_ DcDc4_Warn_Word1 : 0|16@1+ (1,0) [0|0] ""  HMI
  SG_ DcDc4_Warn_Word2 : 16|16@1+ (1,0) [0|0] ""  HMI
- SG_ DcDc4_spare1 : 32|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc4_spare1 : 40|8@1+ (1,0) [0|0] ""  HMI
  SG_ DcDc4_spare2 : 48|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc4_BatterySoc : 32|8@1+ (1,0) [0|255] ""  HMI
 
 BO_ 144 Modbus_Ctrl: 8 HMI
  SG_ DCDC_RESET : 0|1@1+ (1,0) [0|0] ""  VMS
