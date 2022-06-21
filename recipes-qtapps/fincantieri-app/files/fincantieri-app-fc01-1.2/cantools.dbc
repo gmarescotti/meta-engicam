@@ -181,7 +181,7 @@ BO_ 128 DcDc1: 8 VMS
  SG_ DcDc1_BatteryStatus : 2|6@1+ (1,0) [0|0] ""  HMI
  SG_ DcDc1_Status : 8|8@1+ (1,0) [0|0] ""  HMI
  SG_ DcDc1_Status_Word1 : 16|16@1+ (1,0) [0|0] ""  HMI
- SG_ DcDc1_PowerAct : 32|16@1+ (1,0) [0|0] ""  HMI
+ SG_ DcDc1_PowerAct : 32|16@1+ (0.01,0) [0|0] "kW"  HMI
  SG_ DcDc1_PowerSP : 48|16@1- (1,0) [0|0] "W"  HMI
 
 BO_ 129 DcDc2: 8 VMS
@@ -206,7 +206,7 @@ BO_ 131 DcDc4: 8 VMS
 BO_ 144 Modbus_Ctrl: 8 HMI
  SG_ DCDC_RESET : 0|1@1+ (1,0) [0|0] ""  VMS
  SG_ MODBUS_Ctrl_spare1 : 1|7@1+ (1,0) [0|0] ""  VMS
- SG_ PowerLimitation : 16|16@1+ (0.01,0) [0|0] "kW"  VMS
+ SG_ PowerLimitation : 16|16@1+ (1,0) [0|0] "%"  VMS
  SG_ MODBUS_Ctrl_spare2 : 8|8@1+ (1,0) [0|0] ""  VMS
  SG_ MODBUS_Ctrl_spare3 : 32|16@1+ (1,0) [0|0] ""  VMS
  SG_ MODBUS_Ctrl_spare4 : 48|16@1+ (1,0) [0|0] ""  VMS
