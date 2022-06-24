@@ -29,6 +29,12 @@ QML_IMPORT_PATH =
 
 unix: QMAKE_CXXFLAGS += -fpermissive
 
+QMAKE_CXXFLAGS_RELEASE += -O2
+
+win32: QMAKE_CXXFLAGS_RELEASE += -fp:fast
+win32: QMAKE_CXXFLAGS_RELEASE += -Qpar
+unix: QMAKE_CXXFLAGS_RELEASE += -Ofast
+
 # Default rules for deployment.
 include(deployment.pri)
 
