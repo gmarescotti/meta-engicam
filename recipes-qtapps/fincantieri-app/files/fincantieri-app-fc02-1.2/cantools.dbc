@@ -162,7 +162,7 @@ BO_ 128 DcDc1: 8 VMS
  SG_ Dc_Dc1_Failure : 1|1@1+ (1,0) [0|0] ""  HMI
  SG_ Dc_Dc1_spare1 : 2|6@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Dc_Dc1_Status : 8|8@1+ (1,0) [0|0] ""  HMI
- SG_ Dc_Dc1_PowerAct : 32|16@1+ (1,0) [0|0] ""  HMI
+ SG_ Dc_Dc1_PowerAct : 32|16@1+ (0.01,0) [0|0] "kW"  HMI
  SG_ Dc_Dc1_spare3 : 48|16@1+ (10,0) [0|0] "W" Vector__XXX
  SG_ Dc_Dc1_StatusWord1 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
 
