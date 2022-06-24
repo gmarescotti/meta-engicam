@@ -45,7 +45,7 @@ ApplicationWindow {
     }
 
     Timer {
-        interval: 500; running: true; repeat: true
+        interval: 500; running: !options.skip_timer; repeat: true
         onTriggered: {
             console.debug("ping!")
             cantools.messages.modbus_ctrl.send_frame()

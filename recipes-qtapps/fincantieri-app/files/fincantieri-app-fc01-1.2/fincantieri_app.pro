@@ -11,7 +11,8 @@ unix {
 CONFIG += c++11
 
 SOURCES += \
-    main.cpp
+    main.cpp \
+    options.cpp
 
 win32 {
     RESOURCES += qml_windows.qrc
@@ -35,6 +36,7 @@ include(deployment.pri)
 include(dbccompiler.pri)
 
 HEADERS += \
+    options.h
 
 DISTFILES +=
 

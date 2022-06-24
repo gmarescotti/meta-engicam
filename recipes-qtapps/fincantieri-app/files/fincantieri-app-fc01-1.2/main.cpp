@@ -3,6 +3,8 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 
+#include "options.h"
+
 #if defined(Q_OS_WIN)
 #include <QGuiApplication>
 #else
@@ -36,10 +38,9 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    QVariant &skip_timer = QVariant::fromValue(parser.isSet(noTimerOption));
+    MyOptions options(&app, true); // parser.isSet(noTimerOption));
 
-    QQmlContext *context = new QQmlContext(engine.rootContext());
-    context->setContextProperty("skip_timer", &skip_timer);
+    engine.rootContext()->setContextProperty("options", &options);
 
 #if defined(Q_OS_WIN)
     cantools_qt_init(&engine, "ixxatcan", "", 500000);
