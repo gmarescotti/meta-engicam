@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    MyOptions options(&app, true); // parser.isSet(noTimerOption));
+    MyOptions options(&app, parser.isSet(noTimerOption));
 
     engine.rootContext()->setContextProperty("options", &options);
 

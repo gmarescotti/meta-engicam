@@ -1,6 +1,6 @@
 VERSION="1.2"
 
-PR="r5"
+PR="r6"
 
 FCMODEL="fc01"
 
