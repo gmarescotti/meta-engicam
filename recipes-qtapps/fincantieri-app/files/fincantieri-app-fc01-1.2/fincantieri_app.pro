@@ -11,6 +11,7 @@ unix {
 CONFIG += c++11
 
 SOURCES += \
+    fastengine.cpp \
     main.cpp \
     options.cpp
 

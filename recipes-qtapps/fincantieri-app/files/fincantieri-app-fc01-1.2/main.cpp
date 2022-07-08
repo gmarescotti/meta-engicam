@@ -5,23 +5,25 @@
 
 #include "options.h"
 
-#if defined(Q_OS_WIN)
+#if defined(WITH_GUI)
 #include <QGuiApplication>
-#else
-#include <QCoreApplication>
-#endif
-
 void cantools_qt_init(QQmlApplicationEngine *engine, QString plugin, QString device, quint32 bitrate, int sniffer_max_size=0);
 void modbus_qt_init(QQmlApplicationEngine *engine, QString ip);
+#else
+#include <QCoreApplication>
+void fast_cantools_qt_init(QString plugin, QString device, quint32 bitrate, const int sniffer_max_size=1000);
+void fast_modbus_qt_init(QString ip);
+void connect_all_fastqml(bool);
+#endif
 
 int main(int argc, char *argv[])
 {
-#if defined(Q_OS_WIN)
+#if defined(WITH_GUI)
     QGuiApplication app(argc, argv);
     QString qrc_file = QStringLiteral("qrc:/main_windows.qml");
 #else
     QCoreApplication app(argc, argv);
-    QString qrc_file = QStringLiteral("qrc:/main.qml");
+    // QString qrc_file = QStringLiteral("qrc:/main.qml");
 #endif
 
     app.setApplicationName("fincantieri-app-fc01");
@@ -36,22 +38,26 @@ int main(int argc, char *argv[])
     parser.addOption(noTimerOption);
     parser.process(app);
 
-    QQmlApplicationEngine engine;
-
     MyOptions options(&app, parser.isSet(noTimerOption));
 
+#if WITH_GUI
+    QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("options", &options);
+#endif
 
 #if defined(Q_OS_WIN)
-    cantools_qt_init(&engine, "ixxatcan", "", 500000);
+    fast_cantools_qt_init("ixxatcan", "", 500000);
 #else
     cantools_qt_init(&engine, "socketcan", "can0", 500000, 0 /* disable can sniffer */);
 #endif
-    modbus_qt_init(&engine, ":502"); // server
 
-    engine.load(QUrl(qrc_file));
-    if (engine.rootObjects().isEmpty())
-        return -1;
+    fast_modbus_qt_init(":502"); // server
+
+    // engine.load(QUrl(qrc_file));
+
+    // if (engine.rootObjects().isEmpty()) return -1;
+
+    connect_all_fastqml(parser.isSet(noTimerOption));
 
     return app.exec();
 }
