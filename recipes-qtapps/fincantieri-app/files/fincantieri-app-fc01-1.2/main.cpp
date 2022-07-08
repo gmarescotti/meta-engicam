@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 #if defined(Q_OS_WIN)
     fast_cantools_qt_init("ixxatcan", "", 500000);
 #else
-    cantools_qt_init(&engine, "socketcan", "can0", 500000, 0 /* disable can sniffer */);
+    fast_cantools_qt_init("socketcan", "can0", 500000, 0 /* disable can sniffer */);
 #endif
 
     fast_modbus_qt_init(":502"); // server
