@@ -4,6 +4,7 @@
 #include <QQmlContext>
 
 #include "options.h"
+#include "logutils.h"
 
 #if defined(WITH_GUI)
 #include <QGuiApplication>
@@ -18,6 +19,8 @@ void connect_all_fastqml(bool);
 
 int main(int argc, char *argv[])
 {
+    initLog();
+
 #if defined(WITH_GUI)
     QGuiApplication app(argc, argv);
     QString qrc_file = QStringLiteral("qrc:/main_windows.qml");

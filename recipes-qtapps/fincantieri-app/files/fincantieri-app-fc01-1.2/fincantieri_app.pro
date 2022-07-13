@@ -12,6 +12,7 @@ CONFIG += c++11
 
 SOURCES += \
     fastengine.cpp \
+    logutils.cpp \
     main.cpp \
     options.cpp
 
@@ -43,6 +44,7 @@ include(deployment.pri)
 include(dbccompiler.pri)
 
 HEADERS += \
+    logutils.h \
     options.h
 
 DISTFILES +=
