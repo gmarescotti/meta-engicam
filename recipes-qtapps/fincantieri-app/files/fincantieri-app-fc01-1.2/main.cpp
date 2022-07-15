@@ -19,7 +19,9 @@ void connect_all_fastqml(bool);
 
 int main(int argc, char *argv[])
 {
+#if !defined(Q_OS_WIN)
     initLog();
+#endif
 
 #if defined(WITH_GUI)
     QGuiApplication app(argc, argv);

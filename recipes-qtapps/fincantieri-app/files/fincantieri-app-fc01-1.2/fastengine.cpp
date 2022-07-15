@@ -1,5 +1,6 @@
 #include "mycan.h"
 #include "cantools_qt.h"
+#include "fastengine.h"
 
 #include <QLoggingCategory>
 
@@ -15,6 +16,36 @@ extern MyCan *can0;
 
 static cantoolsQtSignals *cantools;
 static cantoolsQtMessages *messages_store;
+
+void apply_can_filters(QCanBusDevice *device)
+{
+    static QCanBusDevice::Filter filter;
+    static QList<QCanBusDevice::Filter> filterList;
+
+    // filter all CAN bus packages with id in tange 0x80 - 0x83
+    filter.frameId = 0x80u;
+    filter.frameIdMask = 0x7FCu;
+    filter.format = QCanBusDevice::Filter::MatchBaseFormat;
+    filter.type = QCanBusFrame::DataFrame;
+    filterList.append(filter);
+
+    // filter all DataFrames with id 0x90
+    filter.frameId = 0x90;
+    filter.frameIdMask = 0x07FFu;
+    filter.format = QCanBusDevice::Filter::MatchBaseFormat;
+    filter.type = QCanBusFrame::DataFrame;
+    filterList.append(filter);
+
+    // filter all DataFrames with id 0x122
+    filter.frameId = 0x122;
+    filter.frameIdMask = 0x07FFu;
+    filter.format = QCanBusDevice::Filter::MatchBaseFormat;
+    filter.type = QCanBusFrame::DataFrame;
+    filterList.append(filter);
+
+    // apply filter
+    device->setConfigurationParameter(QCanBusDevice::RawFilterKey, QVariant::fromValue(filterList));
+}
 
 void fast_cantools_qt_init(QString plugin, QString device, quint32 bitrate, const int sniffer_max_size=1000)
 {
@@ -32,6 +63,12 @@ void fast_cantools_qt_init(QString plugin, QString device, quint32 bitrate, cons
 
     QObject::connect(can0, &MyCan::on_receive, messages_store, &cantoolsQtMessages::can_receive_frame_callback);
     QObject::connect(messages_store, &cantoolsQtMessages::sendFrame, can0, &MyCan::sendFrame);
+
+    // apply_can_filters(can0->m_canDevice);
+
+    QObject::connect(can0, &MyCan::before_connect_device, [](QCanBusDevice *device) {
+        apply_can_filters(device);
+    });
 
     can0->postconnect();
 

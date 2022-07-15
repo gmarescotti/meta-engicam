@@ -44,6 +44,7 @@ include(deployment.pri)
 include(dbccompiler.pri)
 
 HEADERS += \
+    fastengine.h \
     logutils.h \
     options.h
 
