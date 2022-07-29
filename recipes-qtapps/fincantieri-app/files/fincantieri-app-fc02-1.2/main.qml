@@ -2,16 +2,15 @@ import QtQml 2.5
 import QtQuick 2.5
 
 Item {
+    // DA CANBUS A MODBUS
     ListModel {
         id: nameModel
         ListElement { mod_name: "fc_dcdc_running"; can_name: "dc_dc1_running" }
         ListElement { mod_name: "fc_dcdc_failure"; can_name: "dc_dc1_failure" }
-        ListElement { mod_name: "dcdc_reset2"; can_name: "dcdc_reset" }
 
         ListElement { mod_name: "dcdc_voltage"; can_name: "dcxc_voltage_fc_side" }
         ListElement { mod_name: "fc_dcdc_current"; can_name: "dcxc_current_fc_side" }
         ListElement { mod_name: "fc_dcdc_power"; can_name: "dc_dc1_power_act" }
-        ListElement { mod_name: "fc_dcdc_power_limitation"; can_name: "rx_pdo1_power_current_max" }
         ListElement { mod_name: "dcdc_pwr_unit_temperature"; can_name: "dc_dc2_pwr_unit_temp" }
         ListElement { mod_name: "dcdc_max_available_current"; can_name: "dc_dc2_max_avlb_current" }
         ListElement { mod_name: "dcdc_max_available_power"; can_name: "dc_dc2_max_avlb_pwr" }
@@ -49,13 +48,20 @@ Item {
         ListElement { mod_name: "dcdc_error_word_3"; can_name: "dc_dc3_err_word3" }
         ListElement { mod_name: "dcdc_status_word_1"; can_name: "dc_dc1_status_word1" }
 
+        ListElement { mod_name: "mute_h2_sens_exhaust2"; can_name: "mute_h2_sens_exhaust" }
+        ListElement { mod_name: "status_freeze_protection"; can_name: "tx_pdo1_status_freeze_protection" }
+    }
+
+    ListModel {
+        id: nameModel2
+        ListElement { mod_name: "fc_dcdc_power_limitation"; can_name: "rx_pdo1_power_current_max" }
         ListElement { mod_name: "system_off_request"; can_name: "rx_pdo1_system_off_request" }
         ListElement { mod_name: "fast_shutdown_request"; can_name: "rx_pdo1_fast_shutdown_request" }
         ListElement { mod_name: "freeze_protection_request"; can_name: "rx_pdo1_freeze_protectio_request" }
-        ListElement { mod_name: "mute_h2_sens_exhaust2"; can_name: "mute_h2sens_exhaust" }
-        ListElement { mod_name: "status_freeze_protection"; can_name: "txpdo1_status_freeze_protection" }
+        ListElement { mod_name: "dcdc_reset2"; can_name: "dcdc_reset" }
     }
 
+    // DA CAN A MODBUS
     Repeater {
         model: nameModel
         delegate: Item {
@@ -64,9 +70,16 @@ Item {
                 property: 'smart_val' // out
                 value: cantools[can_name].val // in
             }
+        }
+    }
+
+    // DA MODBUS A CANBUS
+    Repeater {
+        model: nameModel2
+        delegate: Item {
             Binding {
                 target: cantools[can_name]
-                property: 'val' // out ()
+                property: 'smart_val' // out ()
                 value: modbus[mod_name].val // in
             }
         }
