@@ -20,10 +20,6 @@ win32 {
     RESOURCES += qml_windows.qrc
 }
 
-unix {
-    RESOURCES += qml.qrc
-}
-
 # CONFIG += qtquickcompiler
 
 # Additional import path used to resolve QML modules in Qt Creator's code model

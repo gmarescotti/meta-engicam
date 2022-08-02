@@ -8,8 +8,6 @@ unix {
     QT +=  qml
 }
 
-CONFIG -= qml_debug
-
 CONFIG += c++11
 
 SOURCES += \
@@ -20,10 +18,6 @@ SOURCES += \
 
 win32 {
     RESOURCES += qml_windows.qrc
-}
-
-unix {
-    RESOURCES += qml.qrc
 }
 
 CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT
