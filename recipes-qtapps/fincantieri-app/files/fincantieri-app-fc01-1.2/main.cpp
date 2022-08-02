@@ -1,5 +1,3 @@
-#include <QCommandLineOption>
-#include <QCommandLineParser>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 
@@ -8,14 +6,12 @@
 
 #include "options.h"
 #include "logutils.h"
+#include "fastengine.h"
 
-#if defined(WITH_GUI)
+#if defined(Q_OS_WIN)
 #include <QGuiApplication>
 #else
 #include <QCoreApplication>
-
-void connect_all_fastqml(bool noTimer, MyCan *can0, MyModbus *mb0);
-
 #endif
 
 int main(int argc, char *argv[])
@@ -24,54 +20,33 @@ int main(int argc, char *argv[])
     initLog();
 #endif
 
-#if defined(WITH_GUI)
-    QGuiApplication app(argc, argv);
 #if defined(Q_OS_WIN)
-    QString qrc_file = QStringLiteral("qrc:/main_windows.qml");
-#else
-    QString qrc_file = QStringLiteral("qrc:/main.qml");
-#endif
+    QGuiApplication app(argc, argv);
 #else
     QCoreApplication app(argc, argv);
 #endif
 
-    app.setApplicationName("fincantieri-app-fc01");
-    app.setApplicationVersion("1.0");
-
-    QCommandLineParser parser;
-    parser.setApplicationDescription(QCoreApplication::translate("main", "Gateway between MODBUS and CANBUS packets"));
-    parser.addHelpOption();
-    parser.addVersionOption();
-
-    QCommandLineOption noTimerOption(QStringList() << "n" << "no-timer", QCoreApplication::translate("main", "Don't send polling CAN packets (skip Timer)."));
-    parser.addOption(noTimerOption);
-
-    QCommandLineOption canInterfaceOption(QStringList() << "i" << "can interface", QCoreApplication::translate("main", "CAN interface <interface> to be used."), "interface", "");
-    parser.addOption(canInterfaceOption);
-    parser.process(app);
-
-#if WITH_GUI
-    MyOptions options(&app, parser.isSet(noTimerOption));
-    QQmlApplicationEngine engine;
-    engine.rootContext()->setContextProperty("options", &options);
-#endif
-
+    MyOptions options(&app);
     MyCan *can0;
+    QQmlApplicationEngine *engine = NULL;
+
 #if defined(Q_OS_WIN)
-    can0 = cantools_qt_init(NULL, "ixxatcan", parser.value("i"), 500000, 0);
+    engine = new QQmlApplicationEngine(&app);
+    engine->rootContext()->setContextProperty("options", &options);
+    can0 = cantools_qt_init(engine, "ixxatcan", options.m_interface, 500000, 0);
 #else
-    can0 = cantools_qt_init(NULL, "socketcan", parser.value("i") == "" ? "can0" : parser.value("i"), 500000, 0 /* disable can sniffer */);
+    can0 = cantools_qt_init(engine, "socketcan", options.m_interface == "" ? "can0" : options.m_interface, 500000, 0 /* disable can sniffer */);
 #endif
 
     MyModbus *modbus_station;
-    modbus_station = modbus_qt_init(NULL, ":502"); // server
+    modbus_station = modbus_qt_init(engine, ":502"); // server
 
-#if WITH_GUI
-    engine.load(QUrl(qrc_file));
-    if (engine.rootObjects().isEmpty()) return -1;
+#if defined(Q_OS_WIN)
+    engine->load(QUrl(QStringLiteral("qrc:/main_windows.qml")));
+    if (engine->rootObjects().isEmpty()) return -1;
 #endif
 
-    connect_all_fastqml(parser.isSet(noTimerOption), can0, modbus_station);
+    connect_all_fastqml(options.m_skip_timer, can0, modbus_station);
 
     return app.exec();
 }
