@@ -11,10 +11,10 @@ unix {
 CONFIG += c++11
 
 SOURCES += \
-    fastengine.cpp \
+    options.cpp \
     logutils.cpp \
     main.cpp \
-    options.cpp
+    fastengine.cpp
 
 win32 {
     RESOURCES += qml_windows.qrc
@@ -44,9 +44,9 @@ include(deployment.pri)
 include(dbccompiler.pri)
 
 HEADERS += \
-    fastengine.h \
+    options.h \
     logutils.h \
-    options.h
+    fastengine.h
 
 DISTFILES +=
 

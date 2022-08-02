@@ -13,7 +13,10 @@ CONFIG -= qml_debug
 CONFIG += c++11
 
 SOURCES += \
-    main.cpp
+    options.cpp \
+    logutils.cpp \
+    main.cpp \
+    fastengine.cpp
 
 win32 {
     RESOURCES += qml_windows.qrc
@@ -47,6 +50,9 @@ include(deployment.pri)
 include(dbccompiler.pri)
 
 HEADERS += \
+    options.h \
+    logutils.h \
+    fastengine.h
 
 DISTFILES +=
 
