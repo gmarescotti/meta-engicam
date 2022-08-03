@@ -125,7 +125,7 @@ QMAKE_EXTRA_COMPILERS += extra3
 #MYMOCS2=$$split(MYMOCS, " ")
 
 #GENERATED_SOURCES = mycan.cpp mymodbus.cpp moc_mymodbus.cpp moc_mycan.cpp myabstractitemmodel.cpp moc_myabstractitemmodel.cpp $$replace(DBC, ".dbc", ".c") $$replace(DBC, ".dbc", "_qt.cpp") $$replace(DBC, ".dbc", "_qt_init.cpp") $$MYMOCS2
-HEADERS += $$replace(DBC, ".dbc", ".h") $$replace(DBC, ".dbc", "_qt.h") mycan.h mymodbus.h
-SOURCES += mycan.cpp mymodbus.cpp myabstractitemmodel.cpp $$replace(DBC, ".dbc", ".c") $$replace(DBC, ".dbc", "_qt.cpp") $$replace(DBC, ".dbc", "_qt_init.cpp")
+# HEADERS += $$replace(DBC, ".dbc", ".h") $$replace(DBC, ".dbc", "_qt.h") mycan.h mymodbus.h
+# SOURCES += mycan.cpp mymodbus.cpp myabstractitemmodel.cpp $$replace(DBC, ".dbc", ".c") $$replace(DBC, ".dbc", "_qt.cpp") $$replace(DBC, ".dbc", "_qt_init.cpp")
 
 # system( echo 2 1>&2 )

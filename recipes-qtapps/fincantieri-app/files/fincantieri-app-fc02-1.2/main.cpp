@@ -27,17 +27,21 @@ int main(int argc, char *argv[])
 #endif
 
     MyOptions options(&app);
+    MyCan *can0;
     QQmlApplicationEngine *engine = NULL;
 
-    MyCan *can0;
+    qInfo() << "Instantiating CANBUS.....";
 
 #if defined(Q_OS_WIN)
     engine = new QQmlApplicationEngine(&app);
     engine->rootContext()->setContextProperty("options", &options);
-    can0 = cantools_qt_init(engine, "ixxatcan", options.m_interface, 500000);
+    can0 = cantools_qt_init(engine, "ixxatcan", options.m_interface, 500000, 0);
 #else
     can0 = cantools_qt_init(engine, "socketcan", options.m_interface == "" ? "can0" : options.m_interface, 500000, 0 /* disable can sniffer */);
 #endif
+
+    qInfo() << "Instantiating MODBUS.....";
+
     MyModbus *modbus_station;
     modbus_station = modbus_qt_init(engine, ":502"); // server
 

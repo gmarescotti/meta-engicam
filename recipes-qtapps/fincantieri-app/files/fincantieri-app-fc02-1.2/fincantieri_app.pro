@@ -20,9 +20,9 @@ win32 {
     RESOURCES += qml_windows.qrc
 }
 
-CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT
-CONFIG(release, debug|release): DEFINES += QT_NO_INFO_OUTPUT
-CONFIG(release, debug|release): DEFINES += QT_NO_WARNING_OUTPUT
+# CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT
+# CONFIG(release, debug|release): DEFINES += QT_NO_INFO_OUTPUT
+# CONFIG(release, debug|release): DEFINES += QT_NO_WARNING_OUTPUT
 
 QMAKE_CXXFLAGS_RELEASE += -O2
 

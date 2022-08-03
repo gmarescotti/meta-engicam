@@ -83,7 +83,7 @@ static void myMessageHandler(QtMsgType type, const QMessageLogContext &context, 
     outFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text);
     QTextStream ts(&outFile);
     ts.setCodec("UTF-8");
-    ts << txt << Qt::endl;
+    ts << txt << "\n"; // Qt::endl;
 }
 
 static void rollback()
